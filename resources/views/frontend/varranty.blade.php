@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warranty Registration</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gradient-to-r from-gray-500 to-teal-500 min-h-screen flex items-center justify-center p-6">
+@extends('components.main')
+@section('content')
+<section class="bg-gradient-to-r from-gray-500 to-teal-500 min-h-screen flex items-center justify-center p-6">
     
     <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 bg-black bg-opacity-20 backdrop-blur-md shadow-lg rounded-2xl p-8 border border-white border-opacity-30">
         
@@ -97,7 +91,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="rounded-lg  mt-4 w-full p-3 rounded-lg bg-teal-900 text-white font-semibold hover:bg-teal-700 transition">
+                <button type="submit" class="rounded-lg  mt-4 w-full p-3 rounded-lg bg-[#14B7A5] text-white font-semibold hover:bg-teal-600 transition">
                     Register Warranty
                 </button>
 
@@ -118,5 +112,5 @@
         }
     </style>
 
-</body>
-</html>
+</section>
+@endsection

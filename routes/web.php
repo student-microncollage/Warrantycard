@@ -6,6 +6,9 @@ use App\Http\Controllers\ComplainController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserRegisterController;
 use App\Http\Controllers\WarentyCardController;
+use PHPUnit\Runner\HookMethod;
+use Termwind\Components\Hr;
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -41,4 +44,9 @@ Route::get('/userregister/show/{id}',[UserRegisterController::class,'show'])->na
 
 // --------------------FRONTEND -- CONTROLLER----------------//
 Route::get('/index', [HomeController::class, 'index'])->name('frontend.index');
+Route::get('/feedback', [HomeController::class, 'feedback'])->name('feedback');
+Route::get('/complain', [HomeController::class, 'complain'])->name('complain');
+Route::get('/user_rec', [HomeController::class, 'user_rec'])->name('user_rec');
+Route::get('/inqury', [HomeController::class, 'inqury'])->name('inqury');
+Route::get('varranty', [HomeController::class, 'varranty'])->name('varranty');
 

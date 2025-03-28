@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complaint Form</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-black min-h-screen flex items-center justify-center p-6">
+@extends('components.main')
+@section('content')
+<section class="bg-black min-h-screen flex items-center justify-center p-6">
     <div class="bg-black bg-opacity-20 backdrop-blur-md rounded-2xl shadow-lg shadow-orange-100 p-8 max-w-4xl w-full flex flex-col md:flex-row items-center gap-8">
         
         <!-- Complaint Image -->
@@ -41,25 +35,14 @@
                 </div>
                 
                 <div>
-                    <label for="category" class="block text-white font-medium">Complaint Category</label>
-                    <select id="category" name="category" required 
-                        class="w-full p-3 rounded-lg bg-gray-900 bg-opacity-30 text-white border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-gray-300">
-                        <option value="" disabled selected>Select a category</option>
-                        <option value="Service Quality">Service Quality</option>
-                        <option value="Product Issue">Product Issue</option>
-                        <option value="Billing Problem">Billing Problem</option>
-                        <option value="Delivery Delay">Delivery Delay</option>
-                        <option value="Employee Behavior">Employee Behavior</option>
-                        <option value="Facility Issue">Facility Issue</option>
-                        <option value="Other">Other</option>
-                    </select>
+                    <label for="category" class="block text-white font-medium">Complaint Message</label>
+                   <textarea name="message" id="complain" cols="30" rows="10" class="w-full p-3 rounded-lg bg-white bg-opacity-30 text-white border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-offset-indigo-50"></textarea>
                 </div>
                 
                 <div>
-                    <label for="description" class="block text-white font-medium">Complaint Details</label>
-                    <textarea id="description" name="description" required 
-                        class="w-full p-3 rounded-lg bg-white bg-opacity-30 text-white border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-indigo-300 h-32 resize-none"></textarea>
-                </div>
+                    <label for="textarea" class="block text-white font-medium">Warranty Card Number</label>
+                    <input type="text " placeholder="warranty card number" class="rounded-lg py-2 bg-white bg-opacity-30 text-white border border-white border-opacity-30">
+                    </div>
                 
                 <div>
                     <label class="block text-white font-medium">Attachments (Optional)</label>
@@ -75,5 +58,5 @@
             </form>
         </div>
     </div>
-</body>
-</html>
+</section>
+@endsection
