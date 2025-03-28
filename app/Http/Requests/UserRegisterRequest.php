@@ -25,10 +25,10 @@ class UserRegisterRequest extends FormRequest
             'name' =>'required|string',
             'email' =>'required|email',
             'mobile' =>'required|min:10|max:15',
-            'city' =>'required|min:2',
-            'state' =>'required|min:2',
-            'address' =>'required',
-            'dealer_&_distributor' =>'required',
+            'city' =>'required|string|min:2',
+            'state' =>'required|string|min:2',
+            'address' =>'required|string',
+            'dealer_and_distributor' =>'required',
         ];
     }
 }

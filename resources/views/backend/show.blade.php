@@ -5,8 +5,8 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-lg-10">
-            <div class="card border">
-                <div class="card-header text-center mt-5 bg-info">
+            <div class="card border  mt-5">
+                <div class="card-header text-center bg-info">
                     <h3>Warrenty Card Details</h3>
                 </div>
                 <div class="card-body">

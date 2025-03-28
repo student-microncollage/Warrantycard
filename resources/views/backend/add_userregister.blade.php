@@ -54,7 +54,7 @@
                     <div class="form-group mb-4">
                         <label for="dealer-distributor">Dealer or Distributor</label>
                         {{-- <input type="text" name="dealer" id="dealer-distributor" class="form-control" placeholder="Enter dealer or distributor name..." autofocus> --}}
-                        <select name="dealer_&_distributor" class="form-control">
+                        <select name="dealer_and_distributor" class="form-control">
                             <option value="">Select Dealer or Distributor</option>
                             <option value="Dealer">Dealer</option>
                             <option value="Distributor">Distributor</option>

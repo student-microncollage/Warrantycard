@@ -32,3 +32,5 @@ Route::get('/complain/delete/{id}',[ComplainController::class,'delete'])->name('
 Route::get('/userregister/index',[UserRegisterController::class,'index'])->name('userregister.index');
 Route::get('/userregister/store',[UserRegisterController::class,'userregister'])->name('userregister.add');
 Route::post('/userregister/store',[UserRegisterController::class,'store'])->name('userregister.store');
+Route::get('/userregister/delete/{id}',[UserRegisterController::class,'delete'])->name('userregister.delete');
+Route::get('/userregister/show/{id}',[UserRegisterController::class,'show'])->name('userregister.show');

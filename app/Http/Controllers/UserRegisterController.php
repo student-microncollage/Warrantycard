@@ -10,9 +10,11 @@ class UserRegisterController extends Controller
 {
 
   public function index(){
-    return view('backend.userregister');
+    $userregister = UserRegister::orderBy('id','desc')->paginate(6); 
+    // dd($userregister);
+    return view('backend.userregister',compact('userregister'));
   }
-
+//--------------------- INSERT USERE-REGISTER QUERY -------------//
   public function userregister(){
     return view('backend.add_userregister');
   }
@@ -23,6 +25,20 @@ class UserRegisterController extends Controller
 
 
     return redirect()->route('userregister.index')->with('succes','Item Added Successfully...!');
+  }
+
+  //----------------- DELETE USER-REGISTER QUERY ------------//
+  public function delete(string $id){
+    $userregister = UserRegister::find($id);
+    $userregister->delete();
+    return redirect()->route('userregister.index')->with('succes','Item deleted Successfully...!');
+  }
+ //----------------- SHOW USER-REGISTER QUERY ------------//
+  public function show(string $id){
+
+    $userregister = UserRegister::find($id);
+    return view('backend.showuser',compact('userregister'));
+
   }
 
 

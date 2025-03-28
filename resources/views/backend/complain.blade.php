@@ -45,11 +45,8 @@
                     @endif
                 </tbody>
             </table>
-            {{-- <div class="mt-4 mx-4">
-                {{$complain->links()}}
-            </div> --}}
             <div class="mx-4 mb-4">
-                {{$complain->links('pagination::bootstrap-4')}}
+                {{$complain->links('pagination::bootstrap-5')}}
             </div>
 
         </div>
