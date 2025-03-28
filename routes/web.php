@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ComplainController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserRegisterController;
 use App\Http\Controllers\WarentyCardController;
 // Route::get('/', function () {
@@ -32,3 +33,7 @@ Route::get('/complain/delete/{id}',[ComplainController::class,'delete'])->name('
 Route::get('/userregister/index',[UserRegisterController::class,'index'])->name('userregister.index');
 Route::get('/userregister/store',[UserRegisterController::class,'userregister'])->name('userregister.add');
 Route::post('/userregister/store',[UserRegisterController::class,'store'])->name('userregister.store');
+
+
+// --------------------FRONTEND -- CONTROLLER----------------//
+Route::get('/index', [HomeController::class, 'index'])->name('frontend.index');
