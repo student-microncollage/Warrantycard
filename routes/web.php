@@ -43,7 +43,7 @@ Route::get('/userregister/show/{id}',[UserRegisterController::class,'show'])->na
 
 
 // --------------------FRONTEND -- CONTROLLER----------------//
-Route::get('/index', [HomeController::class, 'index'])->name('frontend.index');
+
 Route::get('/feedback', [HomeController::class, 'feedback'])->name('feedback');
 Route::get('/complain', [HomeController::class, 'complain'])->name('complain');
 Route::get('/user_rec', [HomeController::class, 'user_rec'])->name('user_rec');
