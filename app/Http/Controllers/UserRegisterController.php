@@ -24,7 +24,7 @@ class UserRegisterController extends Controller
     UserRegister::create($request->all());
 
 
-    return redirect()->route('userregister.index')->with('succes','Item Added Successfully...!');
+    return redirect()->back()->with('success','Your inquiry form has been successfully submitted...!');
   }
 
   //----------------- DELETE USER-REGISTER QUERY ------------//

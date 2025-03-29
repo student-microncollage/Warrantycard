@@ -23,7 +23,7 @@ class ComplainController extends Controller
         $request->validate([
             'name' =>'required|string',
             'email' =>'required|email',
-            'mobile' =>'required|min:10|max:15',
+            'mobile' =>['required', 'regex:/^(\+91)?[6-9]\d{9}$/'],
             'complain_m' =>'required|min:5',
             'warentycard_n' =>'required|alpha_num|unique:complains,warenty_card_no',          
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -40,7 +40,7 @@ class ComplainController extends Controller
             'image'=> $imagePath,
         ]);
 
-        return redirect()->route('complain.index')->with('succes','Item Added SuccessFully...!');
+        return redirect()->back()->with('success','Your complaint has been successfully submitted....!');
     }
 
     //----------------- COMPLAIN DELETED QUERY ----------------//

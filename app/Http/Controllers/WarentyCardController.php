@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\AdminMail;
 use App\Mail\WarntyMail;
 use App\Models\WarentyCard;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -26,7 +27,8 @@ class WarentyCardController extends Controller
          $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'phone' => 'required',
+            'phone' =>['required', 'regex:/^(\+91)?[6-9]\d{9}$/'],
+            'terms' => 'required',
             'city' => 'required|min:3|max:255',
             'state' => 'required|min:3|max:255',
             'productsln' => 'required|integer',
@@ -46,17 +48,16 @@ class WarentyCardController extends Controller
             'status' => 'pending',
            'warenty_card_no' => Str::random(10),
             'purchase_date' =>$request->purchase_date,
-            // 'expaire_date' =>$request->expaired,
+            'expaire_date' =>Carbon::parse($request->purchase_date)->addYear(1),
         ]);
       
-        // dd($warentycardData);
         if ($warentycardData) {
             // $adminemail = 'admin@gmail.com';
               Mail::to('vishalsharmagajrahi@gmail.com')->send(new AdminMail($warentycardData));
                 Mail::to($request->email)->send(new WarntyMail($warentycardData));
         }
         // return redirect()->route('varranty')->with('succes','Item Add SuccessFully...!');
-        return redirect()->back()->with('success', 'Item Added Successfully...!');
+        return redirect()->back()->with('success','Warranty registration completed successfully...!');
     }
 
     //-------------------  DELETE WARENTY-CARD QUERY ---------------//

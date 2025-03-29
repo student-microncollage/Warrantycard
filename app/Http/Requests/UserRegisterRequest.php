@@ -24,7 +24,7 @@ class UserRegisterRequest extends FormRequest
         return [
             'name' =>'required|string',
             'email' =>'required|email',
-            'mobile' =>'required|min:10|max:15',
+            'mobile' =>['required', 'regex:/^(\+91)?[6-9]\d{9}$/'],
             'city' =>'required|string|min:2',
             'state' =>'required|string|min:2',
             'address' =>'required|string',

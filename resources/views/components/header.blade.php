@@ -30,6 +30,7 @@
                     </ul>
                 </li>
                 <li><a href="{{route('varranty')}}" class="hover:text-yellow-300 transition">Warranty</a></li>
+                {{-- <li><a href="{{route('admin.dashbord')}}" class="hover:text-yellow-300 transition">Admin</a></li> --}}
             </ul>
         </div>
         

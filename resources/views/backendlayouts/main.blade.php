@@ -3,14 +3,14 @@
   <head>
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
+    <title>RVG </title>
     <meta
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       name="viewport"
     />
     <link
       rel="icon"
-      href="{{asset('assets/img/kaiadmin/favicon.ico')}}"
+      href="{{asset('assets/img/kaiadmin/rvg.png')}}"
       type="image/x-icon"
     />
 
@@ -43,13 +43,6 @@
           },4000);
         });
       </script>
-      {{-- <script>
-          $(document).ready(function() {
-              setTimeout(function() {
-                  $("#success-message").fadeOut("slow");
-              }, 3000);
-          });
-      </script> --}}
 
 
 

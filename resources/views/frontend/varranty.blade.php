@@ -3,20 +3,23 @@
 
 
 <section class="bg-gradient-to-r from-gray-500 to-teal-500 min-h-screen flex items-center justify-center p-6">
-    @if (session('succes'))
-        <div id="success-message">
-            <div class="alert alert-danger">
-                {{session('succes')}}
-            </div> 
-        </div>
-    @endif 
     <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 bg-black bg-opacity-20 backdrop-blur-md shadow-lg rounded-2xl p-8 border border-white border-opacity-30">
         
        
 
         <!-- Left Section (Form) -->
         <div>
-           
+                 @if (session('success'))
+                    <script>
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: "{{ session('success') }}",
+                            timer: 5000, // 5 सेकंड में ऑटो बंद होगा
+                            showConfirmButton: false
+                        });
+                    </script>
+                @endif
             <h1 class="text-2xl font-semibold text-white text-center">Warranty Registration</h1>
             <p class="text-white text-opacity-80 text-sm text-center mb-6">Register your product to activate your warranty.</p>
             
@@ -26,15 +29,23 @@
                     <!-- Full Name -->
                     <div>
                         <label class="block text-white font-medium">Full Name</label>
-                        <input type="text" name="name" required placeholder="John Doe" 
-                            class="input-field rounded-lg py-2">
+                        <input type="text" name="name"  placeholder="name..." class="input-field rounded-lg py-2">
+                        <p>
+                            @error('name')
+                            <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </p>
                     </div>
 
                     <!-- Email -->
                     <div>
                         <label class="block text-white font-medium">Email Address</label>
-                        <input type="email" name="email" required placeholder="john@example.com" 
-                            class="input-field rounded-lg py-2">
+                        <input type="email" name="email"  placeholder="xyz@example.com"  class="input-field rounded-lg py-2">
+                            <p>
+                                @error('email')
+                                <span class="text-red-500">{{ $message }}</span>
+                                @enderror
+                            </p>
                     </div>
                 </div>
 
@@ -42,15 +53,23 @@
                     <!-- Phone -->
                     <div>
                         <label class="block text-white font-medium">Phone Number</label>
-                        <input type="tel" name="phone" required placeholder="+1 555-123-4567"
-                            class="input-field rounded-lg py-2">
+                        <input type="tel" name="phone"  placeholder="mobile...." class="input-field rounded-lg py-2">
+                        <p>
+                            @error('phone')
+                            <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </p>
                     </div>
 
                     <!-- City -->
                     <div>
                         <label class="block text-white font-medium">City</label>
-                        <input type="text" name="city" required placeholder="New York"
-                            class="input-field rounded-lg py-2">
+                        <input type="text" name="city"  placeholder="City..." class="input-field rounded-lg py-2">
+                        <p>
+                            @error('city')
+                            <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </p>
                     </div>
                 </div>
 
@@ -58,15 +77,25 @@
                     <!-- Product Model -->
                     <div>
                         <label class="block text-white font-medium">State</label>
-                        <input type="text" name="state" required placeholder="XYZ-1234"
+                        <input type="text" name="state"  placeholder="State..."
                             class="input-field rounded-lg py-2">
+                            <p>
+                                @error('state')
+                                <span class="text-red-500">{{ $message }}</span>
+                                @enderror
+                            </p>
                     </div>
 
                     <!-- Serial Number -->
                     <div>
                         <label class="block text-white font-medium">Product (SL Number)</label>
-                        <input type="text" name="productsln" required placeholder="SN-ABC-987654"
+                        <input type="text" name="productsln"  placeholder="product.sl.no..."
                             class="input-field rounded-lg py-2">
+                            <p>
+                                @error('productsln')
+                                <span class="text-red-500">{{ $message }}</span>
+                                @enderror
+                            </p>
                     </div>
                 </div>
 
@@ -74,21 +103,36 @@
                     <!-- Date of Purchase -->
                     <div>
                         <label class="block text-white font-medium">Date of Purchase</label>
-                        <input type="date" name="purchase_date" required class="input-field rounded-lg py-2">
+                        <input type="date" name="purchase_date"  class="input-field rounded-lg py-2">
+                        <p>
+                            @error('purchase_date')
+                            <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </p>
                     </div>
 
                     <!-- Purchase From -->
                     <div>
                         <label class="block text-white font-medium">Purchased From</label>
-                        <input type="text" name="purchaseform" required placeholder="Best Buy, Walmart, etc."
+                        <input type="text" name="purchaseform"  placeholder="purchase-form...."
                             class="input-field rounded-lg py-2">
+                            <p>
+                                @error('purchaseform')
+                                <span class="text-red-500">{{ $message }}</span>
+                                @enderror
+                            </p>
                     </div>
                 </div>
 
                 <!-- Terms & Conditions -->
                 <div class="mt-4 flex items-center space-x-2">
-                    <input type="checkbox" id="terms" name="terms" required class="rounded-lg w-5 h-5 py-2 bg-white bg-opacity-30 border border-white border-opacity-30 focus:ring-2 focus:ring-teal-300">
+                    <input type="checkbox" id="terms" name="terms"  class="rounded-lg w-5 h-5 py-2 bg-white bg-opacity-30 border border-white border-opacity-30 focus:ring-2 focus:ring-teal-300">
                     <label for="terms" class="text-white text-sm">I agree to the <a href="#" class="underline text-teal-300">terms and conditions</a></label>
+                    <p>
+                        @error('terms')
+                        <span class="text-red-500">{{ $message }}</span>
+                        @enderror
+                    </p>
                 </div>
 
                 <!-- Submit Button -->

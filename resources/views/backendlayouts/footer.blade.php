@@ -4,25 +4,25 @@
       <nav class="pull-left">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="http://www.themekita.com">
-              ThemeKita
+            <a class="nav-link" href="#">
+              Privacy Policy
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> Help </a>
+            <a class="nav-link" href="#"> Terms of Service  </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"> Licenses </a>
-          </li>
+          {{-- <li class="nav-item">
+            <a class="nav-link" href="#">  </a>
+          </li> --}}
         </ul>
       </nav>
       <div class="copyright">
-        2025, made with <i class="fa fa-heart heart text-danger"></i> by
-        <a href="http://www.themekita.com">ThemeKita</a>
+        © 2025 RealVictoryGroups. All Rights Reserved. <i class="fa fa-heart heart text-danger"></i>Designed by RVG
+        {{-- <a href="#">ThemeKita</a> --}}
       </div>
       <div>
         Distributed by
-        <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
+        <a target="_blank" href="#">RVG</a>.
       </div>
     </div>
   </footer>

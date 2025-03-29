@@ -5,15 +5,20 @@
     <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 p-10 rounded-2xl shadow-2xl bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-30">
         
         <!-- Form Section -->
-
+                 @if (session('success'))
+                    <script>
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: "{{ session('success') }}",
+                            timer: 5000, // 5 सेकंड में ऑटो बंद होगा
+                            showConfirmButton: false
+                        });
+                    </script>
+                @endif
+                
         <div>
-            @if (session('succes'))
-                <div id="success-message">
-                    <div class="alert alert-danger">
-                        {{session('succes')}}
-                    </div> 
-                </div>
-            @endif 
+          
             <h2 class="text-center text-3xl font-bold text-white mb-6 uppercase tracking-wider">Submit an Inquiry</h2>
             
             <form action="{{route('userregister.store')}}" method="POST" enctype="multipart/form-data" class="space-y-4">
@@ -22,13 +27,26 @@
                     <!-- Full Name -->
                     <div>
                         <label class="block text-white font-medium">Full Name</label>
-                        <input type="text" name="name" required class="input-field rounded-lg py-2" placeholder="Enter your full name">
+                        <input type="text" name="name" class="input-field rounded-lg py-2" placeholder="Enter your full name">
+                       <p>
+                        @error('name')
+                        <span class="text-red-500">{{ $message }}</span>
+                        @enderror
+                       </p>
                     </div>
+                  
+                        
+                   
 
                     <!-- Email Address -->
                     <div>
                         <label class="block text-white font-medium">Email Address</label>
-                        <input type="email" name="email" required class="input-field rounded-lg py-2" placeholder="Enter your email">
+                        <input type="email" name="email" class="input-field rounded-lg py-2" placeholder="Enter your email">
+                        <p>
+                            @error('email')
+                            <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </p>
                     </div>
                 </div>
 
@@ -36,13 +54,23 @@
                     <!-- Phone Number -->
                     <div>
                         <label class="block text-white font-medium">Phone Number</label>
-                        <input type="tel" name="mobile" required class="input-field rounded-lg py-2" placeholder="Enter your phone number">
-                    </div>
+                        <input type="tel" name="mobile" class="input-field rounded-lg py-2" placeholder="Enter your phone number">
+                        <p>
+                            @error('mobile')
+                            <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </p>
+                     </div>
 
                     <!-- City -->
                     <div>
                         <label class="block text-white font-medium">City</label>
-                        <input type="text" name="city" required class="input-field rounded-lg py-2" placeholder="Enter your city">
+                        <input type="text" name="city" class="input-field rounded-lg py-2" placeholder="Enter your city">
+                        <p>
+                            @error('city')
+                            <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </p>
                     </div>
                 </div>
 
@@ -50,13 +78,23 @@
                     <!-- State -->
                     <div>
                         <label class="block text-white font-medium">State</label>
-                        <input type="text" name="state" required class="input-field rounded-lg py-2" placeholder="Enter your state">
+                        <input type="text" name="state" class="input-field rounded-lg py-2" placeholder="Enter your state">
+                        <p>
+                            @error('state')
+                            <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </p>
                     </div>
 
                     <!-- Address -->
                     <div>
                         <label class="block text-white font-medium">Address</label>
-                        <textarea name="address" required class="input-field h-16 resize-none rounded-lg" placeholder="Enter your address"></textarea>
+                        <textarea name="address" class="input-field h-16 resize-none rounded-lg" placeholder="Enter your address"></textarea>
+                        <p>
+                            @error('address')
+                            <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </p>
                     </div>
                 </div>
 
@@ -64,12 +102,17 @@
                     <!-- Dealer Name -->
                     <div>
                         <label class="block text-white font-medium">Dealer  & Distributor</label>
-                        {{-- <input type="text" name="dealer" required class="input-field rounded-lg py-2" placeholder="Enter dealer name"> --}}
+                        {{-- <input type="text" name="dealer" class="input-field rounded-lg py-2" placeholder="Enter dealer name"> --}}
                         <select name="dealer_and_distributor" class="input-field rounded-lg py-2">
                             <option value="">Select Dealer or Distributor</option>
                             <option value="Dealer">Dealer</option>
                             <option value="Distributor">Distributor</option>
                         </select>
+                        <p>
+                            @error('dealer_and_distributor')
+                            <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </p>
                     </div>
                 </div>
 
