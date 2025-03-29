@@ -40,7 +40,7 @@
         $(document).ready(function(){
           setTimeout(function(){
             $("#success-message").fadeOut('slow')
-          },3000);
+          },4000);
         });
       </script>
       {{-- <script>

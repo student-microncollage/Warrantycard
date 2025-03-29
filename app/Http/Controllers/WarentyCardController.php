@@ -23,8 +23,6 @@ class WarentyCardController extends Controller
     }
 
     public function store(Request $request){
-    
-    //    dd($request->all());
          $request->validate([
             'name' => 'required',
             'email' => 'required|email',
@@ -57,7 +55,8 @@ class WarentyCardController extends Controller
               Mail::to('vishalsharmagajrahi@gmail.com')->send(new AdminMail($warentycardData));
                 Mail::to($request->email)->send(new WarntyMail($warentycardData));
         }
-        return redirect()->route('warentycard.index')->with('succes','Item Add SuccessFully...!');
+        // return redirect()->route('varranty')->with('succes','Item Add SuccessFully...!');
+        return redirect()->back()->with('success', 'Item Added Successfully...!');
     }
 
     //-------------------  DELETE WARENTY-CARD QUERY ---------------//

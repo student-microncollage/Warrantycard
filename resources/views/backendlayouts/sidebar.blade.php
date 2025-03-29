@@ -33,7 +33,7 @@
             <a href="{{route('admin.dashbord')}}"> <i class="fas fa-home"></i> <p>Dashboard</p></a>
           </li>
           <li class="nav-item active">
-            <a href="{{route('frontend.index')}}"> <i class="fas fa-home"></i> <p>Home</p></a>
+            <a href="{{route('feedback')}}"> <i class="fas fa-home"></i> <p>Home</p></a>
           </li>
           {{-- <li class="fas fa-home mx-2"><a href="{{route('admin.dashbord')}}"><p>Dashbord</p></a></li> --}}
           <li class="nav-item active">

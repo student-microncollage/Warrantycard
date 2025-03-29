@@ -6,15 +6,15 @@
     <div class="row">
         <div class="justify-content-center mt-4">
                 <h1 class="text-dark text-center"> Add Warenty Card</h1>
-                      @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
 
                 <form action="{{route('warentycard.store')}}"  method="post" enctype="multipart/form-data" class="mx-4">
                  @csrf
