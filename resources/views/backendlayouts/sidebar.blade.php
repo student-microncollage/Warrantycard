@@ -32,6 +32,9 @@
           <li class="nav-item active">
             <a href="{{route('admin.dashbord')}}"> <i class="fas fa-home"></i> <p>Dashboard</p></a>
           </li>
+          <li class="nav-item active">
+            <a href="{{route('frontend.index')}}"> <i class="fas fa-home"></i> <p>Home</p></a>
+          </li>
           {{-- <li class="fas fa-home mx-2"><a href="{{route('admin.dashbord')}}"><p>Dashbord</p></a></li> --}}
           <li class="nav-item active">
             <a href="{{route('warentycard.index')}}"><i class="fas fa-table"></i><p>Warenty Card</p> </a>

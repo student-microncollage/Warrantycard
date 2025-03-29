@@ -6,8 +6,18 @@
     <div class="row">
         <div class="justify-content-center mt-4">
                 <h1 class="text-dark text-center"> Add Warenty Card</h1>
-                <form action="{{route('warentycard.store')}}"  method="POST" enctype="multipart/form-data" class="mx-4">
-                    @csrf
+                      @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                <form action="{{route('warentycard.store')}}"  method="post" enctype="multipart/form-data" class="mx-4">
+                 @csrf
                     <div class="form-group mb-2">
                         <label for="">Name</label>
                         <input type="text" name="name" class="form-control" placeholder="name...." autofocus>
@@ -57,27 +67,20 @@
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
-                    {{-- <div class="form-group mb-2">
-                        <label for="">Warenty-card Number</label>
-                        <input type="text" name="warentyn" class="form-control" placeholder="Warenty-card Number...." autofocus>
-                        @error('warentyn')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div> --}}
                     <div class="form-group mb-2">
                         <label for="">Purchase Date</label>
-                        <input type="date" name="purchased"  autofocus>
-                        @error('purchased')
-                            <span class="text-danger">{{ $message }}</span>
+                        <input type="date" name="purchase_date"  autofocus>
+                        @error('purchase_date')
+                        <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div class="form-group mb-2">
+                    {{-- <div class="form-group mb-2">
                         <label for="">Expaire Date</label>
                         <input type="date" name="expaired"  autofocus>
                         @error('expaired')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
-                    </div>
+                    </div> --}}
                     <div class="form-group mb-4">
                         <button type="submit" class="btn btn-primary btn-sm">Submit</button>
                         <button class="btn btn-warning btn-sm"><a href="{{route('warentycard.index')}}">back</a></button>

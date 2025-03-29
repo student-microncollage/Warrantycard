@@ -15,8 +15,8 @@
             <h1 class="text-2xl font-semibold text-white text-center">Warranty Registration</h1>
             <p class="text-white text-opacity-80 text-sm text-center mb-6">Register your product to activate your warranty.</p>
 
-            <form action="#" method="POST">
-                
+            <form action="" method="" enctype="">
+            
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- Full Name -->
                     <div>

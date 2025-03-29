@@ -21,7 +21,7 @@ class ComplainController extends Controller
     public function store(Request $request){
 
         $request->validate([
-            'name' =>'required|alpha',
+            'name' =>'required|string',
             'email' =>'required|email',
             'mobile' =>'required|min:10|max:15',
             'complain_m' =>'required|min:5',
