@@ -75,7 +75,7 @@
                 
                 <div>
                     <label for="textarea" class="block text-white font-medium">Warranty Card Number</label>
-                    <input type="text " placeholder="warentycard_number" name="warentycard_n" class="rounded-lg py-2 bg-white bg-opacity-30 text-white border border-white border-opacity-30">
+                    <input type="text " placeholder="warentycard_number" name="warentycard_n" class="w-full rounded-lg py-2 bg-white bg-opacity-30 text-white border border-white border-opacity-30">
                     <p>
                         @error('warentycard_n')
                         <span class="text-red-500">{{ $message }}</span>
