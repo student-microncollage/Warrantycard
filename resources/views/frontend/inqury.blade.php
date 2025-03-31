@@ -5,22 +5,18 @@
     <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-6 sm:p-10 rounded-2xl shadow-2xl bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-30">
         
         <!-- Form Section -->
-        @if (session('success'))
-            <div class="fixed inset-0 flex items-center justify-center z-50">
-                <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm mx-auto">
-                    <div class="flex flex-col items-center">
-                        <svg class="w-16 h-16 text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <h3 class="text-lg font-medium text-gray-900 mb-2">Success!</h3>
-                        <p class="text-gray-600 text-center">{{ session('success') }}</p>
-                        <button onclick="this.parentElement.parentElement.parentElement.remove()" class="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors">
-                            Close
-                        </button>
-                    </div>
-                </div>
-            </div>
-        @endif
+                
+             @if (session('success'))
+                <script>
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: "{{ session('success') }}",
+                        timer: 5000, // 5 सेकंड में ऑटो बंद होगा
+                        showConfirmButton: false
+                    });
+                </script>
+            @endif
                 
         <div class="space-y-6">
             <div class="text-center">
@@ -35,10 +31,10 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                         <label for="name" class="block text-white font-medium mb-2">Full Name </label>
-                        <input type="text" id="name" name="name" value="{{ old('name') }}" 
+                        <input type="text" id="name" name="name"  
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-[#ff7e5f] placeholder-white placeholder-opacity-70 transition-all duration-200"
-                               placeholder="John Doe">
+                               placeholder="name....">
                         @error('name')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -46,10 +42,10 @@
                     
                     <div>
                         <label for="email" class="block text-white font-medium mb-2">Email Address </label>
-                        <input type="email" id="email" name="email" value="{{ old('email') }}" 
+                        <input type="email" id="email" name="email"
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-[#ff7e5f] placeholder-white placeholder-opacity-70 transition-all duration-200"
-                               placeholder="john@example.com">
+                               placeholder="email....">
                         @error('email')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -60,10 +56,10 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                         <label for="mobile" class="block text-white font-medium mb-2">Phone Number </label>
-                        <input type="tel" id="mobile" name="mobile" value="{{ old('mobile') }}" 
+                        <input type="tel" id="mobile" name="mobile"
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-[#ff7e5f] placeholder-white placeholder-opacity-70 transition-all duration-200"
-                               placeholder="+91 9876543210">
+                               placeholder="+91....">
                         @error('mobile')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -71,10 +67,10 @@
 
                     <div>
                         <label for="city" class="block text-white font-medium mb-2">City </label>
-                        <input type="text" id="city" name="city" value="{{ old('city') }}" 
+                        <input type="text" id="city" name="city"
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-[#ff7e5f] placeholder-white placeholder-opacity-70 transition-all duration-200"
-                               placeholder="Mumbai">
+                               placeholder="city.....">
                         @error('city')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -85,10 +81,10 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                         <label for="state" class="block text-white font-medium mb-2">State </label>
-                        <input type="text" id="state" name="state" value="{{ old('state') }}" 
+                        <input type="text" id="state" name="state" 
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-[#ff7e5f] placeholder-white placeholder-opacity-70 transition-all duration-200"
-                               placeholder="Maharashtra">
+                               placeholder="state...">
                         @error('state')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -99,7 +95,7 @@
                         <textarea id="address" name="address" rows="2"
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-[#ff7e5f] placeholder-white placeholder-opacity-70 transition-all duration-200"
-                               placeholder="123 Main Street, Apartment 4B">{{ old('address') }}</textarea>
+                               placeholder="address..."></textarea>
                         @error('address')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -110,11 +106,11 @@
                 <div>
                     <label for="dealer_and_distributor" class="block text-white font-medium mb-2">Business Type </label>
                     <select id="dealer_and_distributor" name="dealer_and_distributor" 
-                           class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
+                           class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-dark border border-white border-opacity-30 
                                   focus:outline-none focus:ring-2 focus:ring-[#ff7e5f] placeholder-white placeholder-opacity-70 transition-all duration-200 appearance-none">
-                        <option value="" disabled selected>Select your business type</option>
-                        <option value="Dealer" {{ old('dealer_and_distributor') == 'Dealer' ? 'selected' : '' }}>Dealer</option>
-                        <option value="Distributor" {{ old('dealer_and_distributor') == 'Distributor' ? 'selected' : '' }}>Distributor</option>
+                        <option value="" selected>Select your business type</option>
+                        <option value="Dealer">Dealer</option>
+                        <option value="Distributor">Distributor</option>
                     </select>
                     @error('dealer_and_distributor')
                         <p class="mt-1 text-sm text-red-300">{{ $message }}</p>

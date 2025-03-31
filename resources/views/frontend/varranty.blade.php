@@ -5,19 +5,19 @@
     <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 bg-black bg-opacity-20 backdrop-blur-md shadow-xl rounded-2xl p-6 sm:p-8 border border-white border-opacity-30">
         
         <!-- Left Section (Form) -->
-        <div class="space-y-6">
-            <!-- Success Message Handling -->
+        
             @if (session('success'))
-                <div class="p-4 mb-6 rounded-lg bg-teal-500 bg-opacity-20 border border-teal-300 border-opacity-50">
-                    <div class="flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-white">{{ session('success') }}</span>
-                    </div>
-                </div>
+                <script>
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: "{{ session('success') }}",
+                        timer: 5000, // 5 सेकंड में ऑटो बंद होगा
+                        showConfirmButton: false
+                    });
+                </script>
             @endif
-            
+        <div class="space-y-6">
             <!-- Form Header -->
             <div class="text-center">
                 <h1 class="text-2xl sm:text-3xl font-bold text-white mb-2">Warranty Registration</h1>
@@ -36,7 +36,7 @@
                         <input type="text" id="name" name="name" value="{{ old('name') }}" 
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-teal-300 placeholder-white placeholder-opacity-50 transition-all"
-                               placeholder="John Doe">
+                               placeholder="name...">
                         @error('name')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -48,7 +48,7 @@
                         <input type="email" id="email" name="email" value="{{ old('email') }}" 
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-teal-300 placeholder-white placeholder-opacity-50 transition-all"
-                               placeholder="john@example.com">
+                               placeholder="email...">
                         @error('email')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -63,7 +63,7 @@
                         <input type="tel" id="phone" name="phone" value="{{ old('phone') }}" 
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-teal-300 placeholder-white placeholder-opacity-50 transition-all"
-                               placeholder="+1 (555) 123-4567">
+                               placeholder="+91....">
                         @error('phone')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -75,7 +75,7 @@
                         <input type="text" id="city" name="city" value="{{ old('city') }}" 
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-teal-300 placeholder-white placeholder-opacity-50 transition-all"
-                               placeholder="New York">
+                               placeholder="city...">
                         @error('city')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -90,7 +90,7 @@
                         <input type="text" id="state" name="state" value="{{ old('state') }}" 
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-teal-300 placeholder-white placeholder-opacity-50 transition-all"
-                               placeholder="California">
+                               placeholder="state...">
                         @error('state')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -102,7 +102,7 @@
                         <input type="text" id="productsln" name="productsln" value="{{ old('productsln') }}" 
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-teal-300 placeholder-white placeholder-opacity-50 transition-all"
-                               placeholder="SN-123456789">
+                               placeholder="product_no....">
                         @error('productsln')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror
@@ -114,7 +114,7 @@
                     <!-- Date of Purchase -->
                     <div>
                         <label for="purchase_date" class="block text-white font-medium mb-1">Purchase Date <span class="text-red-400">*</span></label>
-                        <input type="date" id="purchase_date" name="purchase_date" value="{{ old('purchase_date') }}" 
+                        <input type="date" id="purchase_date" name="purchase_date"
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-teal-300 placeholder-white placeholder-opacity-50 transition-all">
                         @error('purchase_date')
@@ -128,7 +128,7 @@
                         <input type="text" id="purchaseform" name="purchaseform" value="{{ old('purchaseform') }}" 
                                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-teal-300 placeholder-white placeholder-opacity-50 transition-all"
-                               placeholder="Amazon, Best Buy, etc.">
+                               placeholder="purchaseform....">
                         @error('purchaseform')
                             <p class="mt-1 text-sm text-red-300">{{ $message }}</p>
                         @enderror

@@ -46,6 +46,9 @@
           <li class="nav-item active">
             <a href="{{route('userregister.index')}}"><i class="fas fa-table"></i><p>User Inquiry Form</p> </a>
           </li>
+          <li class="nav-item active">
+            <a href=""><i class="fas fa-table"></i><p>Feedback</p> </a>
+          </li>
         </ul>
       </div>
     </div>
