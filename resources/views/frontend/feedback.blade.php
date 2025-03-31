@@ -1,50 +1,182 @@
 @extends('components.main')
 @section('content')
-<section class="bg-gradient-to-r from-[#108291ee] via-gray-900 to-[#2d7a73] min-h-screen flex items-center justify-center p-6">
-    <div class="bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 rounded-2xl shadow-lg p-8 max-w-4xl w-full flex flex-col md:flex-row items-center">
-        
-        <!-- Feedback Image -->
-        <div class="hidden md:block w-1/2 p-4">
-            <img src="{{asset('assets/img/front/feedback.webp')}}" alt="Feedback" class="rounded-lg shadow-lg">
+<!-- Hero Banner Section with Parallax Effect -->
+<div class="relative w-full h-[56vh]
+            bg-[url('/assets/img/front/feedback.webp')] bg-no-repeat bg-cover bg-fixed bg-center 
+            flex items-center justify-center overflow-hidden transition-all duration-700">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/70 flex items-center justify-center">
+        <div class="text-center transform transition-all duration-500 ease-in-out">
+            <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wider mb-2">Feedback</h1>
+            <div class="h-1 w-24 md:w-32 bg-gradient-to-r from-gray-500 to-white mx-auto rounded-full"></div>
         </div>
+    </div>
+</div>
 
-        <!-- Form Section -->
-        <div class="w-full md:w-1/2 p-4">
-            <div class="text-center mb-6">
-                <h1 class="text-2xl font-semibold text-white">We Value Your Feedback</h1>
-                <p class="text-gray-300">Please take a moment to share your thoughts with us.</p>
+<!-- Enhanced Breadcrumb Navigation -->
+<nav class="bg-white border-b border-gray-800 text-black py-4 px-6 md:px-12">
+    <div class="container mx-auto">
+        <ol class="flex items-center space-x-2 text-sm md:text-base">
+            <li>
+                <a href="#" class="text-black hover:text-black transition-colors duration-300 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </li>
+            <li class="text-black font-semibold">Feedback</li>
+        </ol>
+    </div>
+</nav>
+
+<!-- Main Feedback Section with Glass Morphism -->
+<section class="bg-white min-h-screen py-16 px-4 md:px-0">
+    <div class="container mx-auto max-w-4xl">
+        <!-- Form Card with Glass Morphism Effect -->
+        <div class="transform hover:scale-[1.01] transition-all duration-300 w-full p-8 md:p-10 
+                   bg-gradient-to-br from-gray-200/80 to-black/10 backdrop-blur-xl 
+                   border border-gray-700 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.3)] 
+                   hover:shadow-[0_8px_40px_rgba(60,60,60,0.2)] overflow-hidden">
+            
+            <!-- Form Header -->
+            <div class="text-center mb-8 relative">
+                <div class="absolute -top-6 -left-6 w-20 h-20 bg-gradient-to-br from-gray-500 to-white to-gray-600 rounded-full opacity-20 blur-xl"></div>
+                
+                <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-black mb-2">We Value Your Feedback</h2>
+                <p class="text-gray-800">Your insights help us deliver an exceptional experience</p>
+                <div class="h-1 w-16 md:w-24 bg-gradient-to-r from-gray-500 to-blue-50 mx-auto mt-4 rounded-full"></div>
             </div>
-
-            <form action="submit_feedback.php" method="POST">
-                <div class="mb-4">
-                    <label for="name" class="block text-white font-medium">Full Name</label>
-                    <input type="text" id="name" name="name" required class="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-[#108291ee]">
+            
+            <!-- Feedback Form with Enhanced UI -->
+            <form action="submit_feedback.php" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Name Field -->
+                    <div class="group">
+                        <label for="name" class="block text-gray-900 text-sm font-medium mb-2 transition-all duration-300 group-focus-within:text-black">
+                            Full Name
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 group-focus-within:text-gray-900 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </div>
+                            <input type="text" id="name" name="name" required 
+                                  class="w-full py-3 pl-10 pr-4 rounded-lg bg-gray-100/70 text-white border border-gray-700 
+                                        focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent
+                                        transition-all duration-300 placeholder-gray-500"
+                                  placeholder="Your name">
+                        </div>
+                    </div>
+                    
+                    <!-- Email Field -->
+                    <div class="group">
+                        <label for="email" class="block text-black text-sm font-medium mb-2 transition-all duration-300 group-focus-within:text-black">
+                            Email Address
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 group-focus-within:text-gray-400 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <input type="email" id="email" name="email" required 
+                                  class="w-full py-3 pl-10 pr-4 rounded-lg bg-gray-100/70 text-black border border-gray-700 
+                                        focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent
+                                        transition-all duration-300 placeholder-gray-50
+                                        0"
+                                  placeholder="your.email@example.com">
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="mb-4">
-                    <label for="email" class="block text-white font-medium">Email Address</label>
-                    <input type="email" id="email" name="email" required class="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-[#108291ee]">
+                <!-- Rating Field with Interactive Stars -->
+                <div>
+                    <label for="rating" class="block text-gray-900 text-sm font-medium mb-2">Your Rating</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                            </svg>
+                        </div>
+                        <select id="rating" name="rating" required 
+                                class="w-full appearance-none py-3 pl-10 pr-8 rounded-lg bg-gray-200/70 text-black border border-gray-700 
+                                      focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent
+                                      transition-all duration-300">
+                            <option value="" disabled selected>Select your rating</option>
+                            <option value="5">★★★★★ - Excellent</option>
+                            <option value="4">★★★★☆ - Very Good</option>
+                            <option value="3">★★★☆☆ - Good</option>
+                            <option value="2">★★☆☆☆ - Fair</option>
+                            <option value="1">★☆☆☆☆ - Needs Improvement</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="mb-4">
-                    <label for="rating" class="block text-white font-medium">Rating</label>
-                    <select id="rating" name="rating" required class="w-full p-3 rounded-lg bg-gray-900 bg-opacity-20 text-white border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-[#108291ee]">
-                        <option value="5">Excellent</option>
-                        <option value="4">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="2">Fair</option>
-                        <option value="1">Poor</option>
-                    </select>
+                <!-- Comments Field -->
+                <div>
+                    <label for="comments" class="block text-gray-900 text-sm font-medium mb-2">Your Feedback</label>
+                    <div class="relative">
+                        <textarea id="comments" name="comments" required 
+                                 class="w-full py-3 px-4 rounded-lg bg-gray-100/70 text-white border border-gray-700 
+                                       focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent
+                                       transition-all duration-300 resize-none h-32 placeholder-gray-600"
+                                 placeholder="Please share your thoughts with us..."></textarea>
+                    </div>
                 </div>
                 
-                <div class="mb-4">
-                    <label for="comments" class="block text-white font-medium">Comments</label>
-                    <textarea id="comments" name="comments" required class="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-[#108291ee] h-32 resize-none"></textarea>
+                <!-- Submit Button with Hover Effect -->
+                <div class="pt-4">
+                    <button type="submit" 
+                            class="w-full py-4 px-6 rounded-lg bg-black hover:to-black
+                                  text-white font-semibold text-sm md:text-base tracking-wide
+                                  transform hover:-translate-y-1 transition-all duration-300
+                                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:ring-offset-gray-900
+                                  shadow-lg hover:shadow-xl hover:shadow-blue-500/20">
+                        <span class="flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                            </svg>
+                            Submit Feedback
+                        </span>
+                    </button>
                 </div>
                 
-                <button type="submit" class="w-full p-3 rounded-lg bg-[#00BFA6] text-white font-semibold hover:bg-[#3a6862] transition">Submit Feedback</button>
+                <!-- Privacy Notice -->
+                <div class="text-center text-xs text-gray-500 mt-6">
+                    <p>Your feedback is confidential and will only be used to improve our services.</p>
+                </div>
             </form>
         </div>
+        
+        <!-- Social Proof or Additional Info -->
+        {{-- <div class="mt-10 text-center">
+            <p class="text-gray-400 text-sm mb-4">Join thousands of satisfied customers who have shared their feedback</p>
+            <div class="flex justify-center space-x-6">
+                <div class="text-center">
+                    <span class="block text-2xl font-bold text-white">10k+</span>
+                    <span class="text-xs text-gray-500">Reviews</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-2xl font-bold text-white">4.8</span>
+                    <span class="text-xs text-gray-500">Average Rating</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-2xl font-bold text-white">92%</span>
+                    <span class="text-xs text-gray-500">Satisfaction</span>
+                </div>
+            </div>
+        </div> --}}
     </div>
 </section>
 @endsection
