@@ -6,10 +6,7 @@
     <div class="row mx-4">
         <div class="justify-content-center mt-4">
                 <h1 class="text-dark text-center">Warenty Card Details</h1>
-                @include('backend.success')
-            <table class="table table-bordered table-striped table-hover mt-4 mx-4  shadow">
-                <a href="{{route('warentycard.add')}}"><button class=" btn btn-success btn-md mx-4 mb-1">add warenty-card</button></a>
-                
+            <table class="table table-bordered table-striped table-hover mt-4 mx-4  shadow">         
                 <thead class="table-info">
                     <tr>
                         <th>SR.no</th>
@@ -19,11 +16,6 @@
                         <th>City</th>
                         <th>State</th>
                         <th>Product.sl number</th>
-                        {{-- <th>Purchase Form</th> --}}
-                        {{-- <th>Status</th>
-                        <th>Warenty card no.</th>
-                        <th>Purchase date</th>
-                        <th>Expaire date</th> --}}
                         <th>Action</th>
                     </tr>
                 </thead>
