@@ -72,7 +72,7 @@
                 <!-- Name Field -->
                 <div class="form-group">
                     <label for="name" class="block text-gray-300 font-medium mb-2 required">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                    <input type="text" id="name" name="name" placeholder="Enter your full name"  autofocus
                         class="w-full px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
                         value="{{ old('name') }}">
                     @error('name')
@@ -83,7 +83,7 @@
                 <!-- Email Field -->
                 <div class="form-group">
                     <label for="email" class="block text-gray-300 font-medium mb-2 required">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" autofocus
                         class="w-full px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
                         value="{{ old('email') }}">
                     @error('email')
@@ -94,7 +94,7 @@
                 <!-- Phone Field -->
                 <div class="form-group">
                     <label for="phone" class="block text-gray-300 font-medium mb-2 required">Phone Number</label>
-                    <input type="tel" id="phone" name="mobile" placeholder="+91 9876543210" required
+                    <input type="tel" id="phone" name="mobile" placeholder="+91 ...." autofocus
                         class="w-full px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
                         value="{{ old('mobile') }}">
                     @error('mobile')
@@ -105,7 +105,7 @@
                 <!-- Complaint Message -->
                 <div class="form-group">
                     <label for="complain" class="block text-gray-300 font-medium mb-2 required">Complaint Details</label>
-                    <textarea id="complain" name="complain_m" rows="6" placeholder="Describe your complaint in detail..." required
+                    <textarea id="complain" name="complain_m" rows="6" placeholder="Describe your complaint in detail..." autofocus
                         class="w-full px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors">{{ old('complain_m') }}</textarea>
                     @error('complain_m')
                         <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
@@ -115,7 +115,7 @@
                 <!-- Warranty Card -->
                 <div class="form-group">
                     <label for="warranty" class="block text-gray-300 font-medium mb-2">Warranty Card Number</label>
-                    <input type="text" id="warranty" name="warentycard_n" placeholder="Enter warranty card number if applicable"
+                    <input type="text" id="warranty" name="warentycard_n" placeholder="Enter warranty card number if applicable" autofocus
                         class="w-full px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
                         value="{{ old('warentycard_n') }}">
                     @error('warentycard_n')
@@ -127,7 +127,7 @@
                 <div class="form-group">
                     <label class="block text-gray-300 font-medium mb-2">Attachments (Optional)</label>
                     <div class="relative">
-                        <input type="file" name="image" id="file-upload" 
+                        <input type="file" name="image" id="file-upload"  autofocus
                             class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
                         <div class="flex items-center justify-between px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 border border-gray-600 border-dashed">
                             <span id="file-name" class="text-gray-300 truncate">No file chosen</span>
