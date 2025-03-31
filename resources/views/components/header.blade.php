@@ -68,7 +68,7 @@
             <ul class="flex space-x-6 text-black text-lg">
                 <li><a href="{{ route('feedback') }}" class="hover:text-red-300 transition">Feedback</a></li>
                 <li><a href="{{ route('complain') }}" class="hover:text-red-300 transition">Complain</a></li>
-                <li><a href="{{ route('user_rec') }}" class="hover:text-red-300 transition">User Requirement</a></li>
+
                 <li><a href="{{ route('inqury') }}" class="hover:text-red-300 transition">Inquiry</a></li>
                 <li><a href="{{ route('varranty') }}" class="hover:text-red-300 transition">Warranty</a></li>
             </ul>
@@ -81,7 +81,7 @@
         <ul class="space-y-2">
             <li><a href="{{ route('feedback') }}" class="block py-2 hover:text-yellow-300 transition">Feedback</a></li>
             <li><a href="{{ route('complain') }}" class="block py-2 hover:text-yellow-300 transition">Complain</a></li>
-            <li><a href="{{ route('user_rec') }}" class="block py-2 hover:text-yellow-300 transition">User Requirement</a></li>
+
             <li><a href="{{ route('inqury') }}" class="block py-2 hover:text-yellow-300 transition">Inquiry</a></li>
             <li><a href="{{ route('varranty') }}" class="block py-2 hover:text-yellow-300 transition">Warranty</a></li>
         </ul>
