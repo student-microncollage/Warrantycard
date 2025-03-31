@@ -1,12 +1,48 @@
 @extends('components.main')
 @section('content')
-<section class="bg-gradient-to-br from-gray-900 to-black min-h-screen flex items-center justify-center p-4 sm:p-6">
-    <div class="bg-black bg-opacity-20 backdrop-blur-lg rounded-xl shadow-2xl p-6 sm:p-8 w-full max-w-2xl border border-white border-opacity-20">
+
+<!-- Hero Banner Section with Improved Parallax Effect -->
+<div class="relative w-full h-[65vh]
+            bg-[url('/assets/img/front/complain.jpg')] bg-no-repeat bg-cover bg-fixed bg-center 
+            flex items-center justify-center overflow-hidden transition-all duration-700">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 flex items-center justify-center">
+        <div class="text-center transform transition-all duration-500 ease-in-out hover:scale-105">
+            <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wider mb-4">We're Here to Help</h1>
+            <p class="text-gray-300 text-xl md:text-2xl max-w-2xl mx-auto mb-6">Your satisfaction is our priority</p>
+            <div class="h-1 w-32 md:w-48 bg-gradient-to-r from-gray-500 via-white to-gray-500 mx-auto rounded-full"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Enhanced Breadcrumb Navigation with Animation -->
+<nav class="bg-white border-b border-gray-200 text-black py-4 px-6 md:px-12 shadow-sm">
+    <div class="container mx-auto">
+        <ol class="flex items-center space-x-2 text-sm md:text-base">
+            <li>
+                <a href="#" class="text-gray-700 hover:text-black transition-colors duration-300 flex items-center group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </li>
+            <li class="text-gray-900 font-semibold">Complaint Form</li>
+        </ol>
+    </div>
+</nav>
+
+<section class="bg-white min-h-screen flex items-center justify-center p-4 sm:p-6">
+    <div class="bg-gray-200 backdrop-blur-lg rounded-xl shadow-2xl p-6 sm:p-8 w-full max-w-2xl border border-black">
         
         <!-- Header Section -->
         <div class="text-center mb-8">
-            <h1 class="text-2xl sm:text-3xl font-bold text-white mb-2">Project Requirements Form</h1>
-            <p class="text-white text-opacity-80 text-sm sm:text-base">Tell us about your project needs and we'll get back to you within 24 hours</p>
+            <h1 class="text-2xl sm:text-3xl font-bold text-black mb-2">Project Requirements Form</h1>
+            <p class="text-black text-opacity-80 text-sm sm:text-base">Tell us about your project needs and we'll get back to you within 24 hours</p>
         </div>
 
         <!-- Form Section -->
@@ -14,17 +50,17 @@
             <!-- Personal Information -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                    <label for="name" class="block text-white font-medium mb-2">Full Name <span class="text-red-400">*</span></label>
+                    <label for="name" class="block text-black font-medium mb-2">Full Name </label>
                     <input type="text" id="name" name="name" required
-                        class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 text-white border border-white border-opacity-20 
-                               focus:outline-none focus:ring-2 focus:ring-green-400 placeholder-white placeholder-opacity-60 transition-all"
+                        class="w-full px-4 py-3 rounded-lg bg-gray-50  text-black border border-black
+                               focus:outline-none focus:ring-2 focus:ring-gray-400 placeholder-gray-100  transition-all"
                         placeholder="John Smith">
                 </div>
                 
                 <div>
-                    <label for="email" class="block text-white font-medium mb-2">Email <span class="text-red-400">*</span></label>
+                    <label for="email" class="block text-black font-medium mb-2">Email </label>
                     <input type="email" id="email" name="email" required
-                        class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 text-white border border-white border-opacity-20 
+                        class="w-full px-4 py-3 rounded-lg bg-gray-50 bg-opacity-10 text-white border border-white border-opacity-20 
                                focus:outline-none focus:ring-2 focus:ring-green-400 placeholder-white placeholder-opacity-60 transition-all"
                         placeholder="john@example.com">
                 </div>
