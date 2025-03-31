@@ -22,7 +22,7 @@
       </div>
       <div>
         Distributed by
-        <a target="_blank" href="#">RVG</a>.
+        < a target="_blank" href="#">RVG</a>.
       </div>
     </div>
   </footer>
@@ -50,7 +50,7 @@
 <script src="{{asset('assets/js/plugin/datatables/datatables.min.js')}}"></script>
 
 <!-- Bootstrap Notify -->
-<script src="{{asset('assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js')}}"></script>
+{{-- <script src="{{asset('assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js')}}"></script> --}}
 
 <!-- jQuery Vector Maps -->
 <script src="{{asset('assets/js/plugin/jsvectormap/jsvectormap.min.js')}}"></script>

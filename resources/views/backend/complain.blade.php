@@ -6,9 +6,7 @@
     <div class="row mx-4">
         <div class="justify-content-center mt-4">
                 <h1 class="text-dark text-center">Complain Details</h1>
-                @include('backend.success')
             <table class="table table-bordered table-striped table-hover mt-4 mx-4  shadow">
-                <a href="{{route('complain.add')}}"><button class=" btn btn-success btn-md mx-4 mb-1">add complain</button></a>
                 <thead class="table-info">
                     <tr>
                         <th>SR.no</th>
