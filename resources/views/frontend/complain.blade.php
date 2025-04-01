@@ -87,7 +87,7 @@
                     <label for="name" class="block text-gray-300 font-medium mb-2 required">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your full name"  autofocus
                         class="w-full px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
-                        value="{{ old('name') }}">
+                        >
                     @error('name')
                         <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                     @enderror
@@ -104,9 +104,9 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
                             </div>
-                            <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" 
                                 class="w-full pl-10 px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
-                                value="{{ old('name') }}">
+                            >
                         </div>
                         @error('name')
                             <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
@@ -126,7 +126,7 @@
                             </div>
                             <input type="tel" id="phone" name="mobile" placeholder="+91 9876543210" required
                                 class="w-full pl-10 px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
-                                value="{{ old('mobile') }}">
+                               >
                         </div>
                         @error('mobile')
                             <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
@@ -139,7 +139,7 @@
                     <label for="email" class="block text-gray-300 font-medium mb-2 required">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="your.email@example.com" autofocus
                         class="w-full px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
-                        value="{{ old('email') }}">
+                        >
 
                     <label for="email" class="block text-gray-700 font-medium mb-2">
                         Email Address <span class="text-red-500">*</span>
@@ -152,7 +152,7 @@
                         </div>
                         <input type="email" id="email" name="email" placeholder="your.email@example.com" required
                             class="w-full pl-10 px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
-                            value="{{ old('email') }}">
+                            >
                     </div>
                     @error('email')
                         <p class="mt-1 text-sm text-red-500">{{ $message }}</p>

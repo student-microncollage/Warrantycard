@@ -48,9 +48,10 @@ class WarentyCardController extends Controller
             'status' => 'pending',
            'warenty_card_no' => Str::random(10),
             'purchase_date' =>$request->purchase_date,
-            'expaire_date' =>Carbon::parse($request->purchase_date)->addYear(1),
+            'expaire_date' =>Carbon::parse($request->purchase_date)->addMonth(12),
         ]);
       
+        // $warentycardData = array_map('strtoupper', $warentycardData );
         if ($warentycardData) {
             // $adminemail = 'admin@gmail.com';
               Mail::to('vishalsharmagajrahi@gmail.com')->send(new AdminMail($warentycardData));
