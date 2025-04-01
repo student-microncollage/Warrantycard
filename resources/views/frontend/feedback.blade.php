@@ -36,6 +36,29 @@
 
 <!-- Main Feedback Section with Glass Morphism -->
 <section class="bg-white min-h-screen py-16 px-4 md:px-0">
+
+
+  <!-- Success Message Handling -->
+             @if (session('success'))
+                <div id="success-message" class="mb-6">
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Thank You!',
+                                text: "{{ session('success') }}",
+                                timer: 5000,
+                                timerProgressBar: true,
+                                showConfirmButton: true,
+                                confirmButtonText: 'Great!',
+                                confirmButtonColor: '#4B5563',
+                                backdrop: 'rgba(0,0,0,0.7)'
+                            });
+                        });
+                    </script>
+                </div>
+            @endif
+
     <div class="container mx-auto max-w-4xl">
         <!-- Form Card with Glass Morphism Effect -->
         <div class="transform hover:scale-[1.01] transition-all duration-300 w-full p-8 md:p-10 
@@ -53,7 +76,8 @@
             </div>
             
             <!-- Feedback Form with Enhanced UI -->
-            <form action="submit_feedback.php" method="POST" class="space-y-6">
+            <form action="{{route('feedback.store')}}" method="post" enctype="multipart/form-data" class="space-y-6">
+                @csrf
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Name Field -->
                     <div class="group">
@@ -67,10 +91,13 @@
                                 </svg>
                             </div>
                             <input type="text" id="name" name="name" 
-                                  class="w-full py-3 pl-10 pr-4 rounded-lg bg-gray-100/70 text-white border border-gray-700 
+                                  class="w-full py-3 pl-10 pr-4 rounded-lg bg-gray-100/70 text-black border border-gray-700 
                                         focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent
                                         transition-all duration-300 placeholder-gray-500"
                                   placeholder="Your name">
+                                  @error('name')
+                                    <p><span class="mt-1 text-sm text-red-500">{{$message}}</span></p>  
+                                  @enderror
                         </div>
                     </div>
                     
@@ -91,6 +118,9 @@
                                         transition-all duration-300 placeholder-gray-50
                                         0"
                                   placeholder="your.email@example.com">
+                                  @error('email')
+                                  <p><span class=" mt-1 text-sm text-red-500">{{$message}}</span></p>  
+                                @enderror
                         </div>
                     </div>
                 </div>
@@ -108,12 +138,11 @@
                                 class="w-full appearance-none py-3 pl-10 pr-8 rounded-lg bg-gray-200/70 text-black border border-gray-700 
                                       focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent
                                       transition-all duration-300">
-                            <option value="" selected>Select your rating</option>
-                            <option value="5">★★★★★ - Excellent</option>
-                            <option value="4">★★★★☆ - Very Good</option>
-                            <option value="3">★★★☆☆ - Good</option>
-                            <option value="2">★★☆☆☆ - Fair</option>
-                            <option value="1">★☆☆☆☆ - Needs Improvement</option>
+                            <option value="excellent">Select your rating</option>
+                            <option value="excellent">★★★★★ Excellent</option>
+                            <option value="very good">★★★★☆ - Very Good</option>
+                            <option value="good">★★★☆☆ - Good</option>
+                            <option value="fair">★★☆☆☆ - Fair</option>
                         </select>
                         <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -128,11 +157,15 @@
                     <label for="comments" class="block text-gray-900 text-sm font-medium mb-2">Your Feedback</label>
                     <div class="relative">
                         <textarea id="comments" name="comments"  
-                                 class="w-full py-3 px-4 rounded-lg bg-gray-100/70 text-white border border-gray-700 
+                                 class="w-full py-3 px-4 rounded-lg bg-gray-100/70 text-black border border-gray-700 
                                        focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent
                                        transition-all duration-300 resize-none h-32 placeholder-gray-600"
                                  placeholder="Please share your thoughts with us..."></textarea>
+                                 @error('comments')
+                                 <p><span class="mt-1 text-sm text-red-500">{{ $message}}</span></p>
+                             @enderror
                     </div>
+                
                 </div>
                 
                 <!-- Submit Button with Hover Effect -->
@@ -158,25 +191,6 @@
                 </div>
             </form>
         </div>
-        
-        <!-- Social Proof or Additional Info -->
-        {{-- <div class="mt-10 text-center">
-            <p class="text-gray-400 text-sm mb-4">Join thousands of satisfied customers who have shared their feedback</p>
-            <div class="flex justify-center space-x-6">
-                <div class="text-center">
-                    <span class="block text-2xl font-bold text-white">10k+</span>
-                    <span class="text-xs text-gray-500">Reviews</span>
-                </div>
-                <div class="text-center">
-                    <span class="block text-2xl font-bold text-white">4.8</span>
-                    <span class="text-xs text-gray-500">Average Rating</span>
-                </div>
-                <div class="text-center">
-                    <span class="block text-2xl font-bold text-white">92%</span>
-                    <span class="text-xs text-gray-500">Satisfaction</span>
-                </div>
-            </div>
-        </div> --}}
     </div>
 </section>
 @endsection

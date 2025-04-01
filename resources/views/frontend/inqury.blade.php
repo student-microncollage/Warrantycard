@@ -66,19 +66,19 @@
                     <p class="text-gray-500 text-opacity-80">We'll get back to you within 24 hours</p>
                 </div>
 
-                <form action="#" method="POST" enctype="multipart/form-data" class="space-y-5">
+                <form action="{{route('userregister.store')}}" method="post" enctype="multipart/form-data" class="space-y-5">
                     @csrf
 
                     <!-- Name and Email -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
                             <label for="name" class="block text-black font-medium mb-2">Full Name </label>
-                            <input type="text" id="name" name="name"
+                            <input type="text" id="name" name="name" 
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="name....">
                             @error('name')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -89,7 +89,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="email....">
                             @error('email')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="+91....">
                             @error('mobile')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -114,7 +114,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="city.....">
                             @error('city')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="state...">
                             @error('state')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -139,7 +139,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="address..."></textarea>
                             @error('address')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
@@ -155,7 +155,7 @@
                             <option value="Distributor">Distributor</option>
                         </select>
                         @error('dealer_and_distributor')
-                            <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                            <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                         @enderror
                     </div>
 

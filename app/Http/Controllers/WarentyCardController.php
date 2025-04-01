@@ -50,10 +50,7 @@ class WarentyCardController extends Controller
             'purchase_date' =>$request->purchase_date,
             'expaire_date' =>Carbon::parse($request->purchase_date)->addMonth(12),
         ]);
-      
-        // $warentycardData = array_map('strtoupper', $warentycardData );
         if ($warentycardData) {
-            // $adminemail = 'admin@gmail.com';
               Mail::to('vishalsharmagajrahi@gmail.com')->send(new AdminMail($warentycardData));
                 Mail::to($request->email)->send(new WarntyMail($warentycardData));
         }

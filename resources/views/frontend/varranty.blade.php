@@ -52,7 +52,7 @@
                         icon: 'success',
                         title: 'Success!',
                         text: "{{ session('success') }}",
-                        timer: 5000, // 5 सेकंड में ऑटो बंद होगा
+                        timer: 5000,
                         showConfirmButton: false
                     });
                 </script>
@@ -75,12 +75,12 @@
                         <div>
                             <label for="name" class="block text-black font-medium mb-1">Full Name 
                                  </label>
-                            <input type="text" id="name" name="name" value="{{ old('name') }}"
+                            <input type="text" id="name" name="name" value="{{ old('name') }}" 
                                 class="w-full px-4 py-3 rounded-lg bg-gray-100 text-black border border-black
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
                                 placeholder="name...">
                             @error('name')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -93,7 +93,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
                                 placeholder="email...">
                             @error('email')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
                                 placeholder="+91....">
                             @error('phone')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -120,7 +120,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
                                 placeholder="city...">
                             @error('city')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
                                 placeholder="state...">
                             @error('state')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -147,7 +147,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
                                 placeholder="product_no....">
                             @error('productsln')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                                 class="w-full px-4 py-3 rounded-lg bg-gray-100 text-black border border-black
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all">
                             @error('purchase_date')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -173,7 +173,7 @@
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
                                 placeholder="purchaseform....">
                             @error('purchaseform')
-                                <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                                         href="#" class="text-gray-800 hover:underline">terms and
                                         conditions</a></label>
                                 @error('terms')
-                                    <p class="mt-1 text-sm text-gray-300">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                                 @enderror
                             </div>
                         </div>

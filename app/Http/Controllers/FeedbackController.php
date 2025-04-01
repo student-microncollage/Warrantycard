@@ -22,6 +22,7 @@ public function store(FeedbackRequest $request){
     return redirect()->back()->with('success','your feedback is completed...!');
 }
 
+// ----------------- DELETE FEEDBACK QUERY --------------//
 public function delete(string $id){
     $feedback = Feedback::find($id);
     $feedback->delete();

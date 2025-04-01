@@ -34,6 +34,8 @@
                         <div class="numbers">
                           <p class="card-category">Warranty Card</p>
                           <h4 class="card-title">{{$warentycard}}</h4>
+                          <p class="card-category">Today</p>
+                          <h4 class="card-title">{{$todaywarenty}}</h4>
                         </div>
                       </div>
 
@@ -57,6 +59,8 @@
                         <div class="numbers">
                           <p class="card-category">Complain</p>
                           <h4 class="card-title">{{$complain}}</h4>
+                          <p class="card-category">Today</p>
+                          <h4 class="card-title">{{$todaycomplain}}</h4>
                         </div>
                       </div>
 
@@ -79,6 +83,8 @@
                         <div class="numbers">
                           <p class="card-category">Inquiry</p>
                           <h4 class="card-title">{{$inquiry}}</h4>
+                          <p class="card-category">Today</p>
+                          <h4 class="card-title">{{$todayinquiry}}</h4>
                         </div>
                       </div>
                     </div>
@@ -100,6 +106,8 @@
                         <div class="numbers">
                           <p class="card-category">Feedback</p>
                           <h4 class="card-title">{{$feedback}}</h4>
+                          <p class="card-category">Today</p>
+                          <h4 class="card-title">{{$todayfeedback}}</h4>
                         </div>
                       </div>
                     </div>

@@ -1,8 +1,8 @@
 <!-- Topbar -->
 <div class="flex justify-between gap-8 bg-[#fefcfc] py-3">
-    <img src="{{ asset('assets/img/front/logo1.jpeg') }}" alt="Logo 1" class="h-12 w-56 object-contain">
-    <img src="{{ asset('assets/img/front/logo2.jpeg') }}" alt="Logo 2" class="h-12 w-56 object-contain">
-    <img src="{{ asset('assets/img/front/logo3.jpeg') }}" alt="Logo 3" class="h-12 w-56 object-contain">
+    <img src="{{ asset('assets/img/front/logo.jpg') }}" alt="missing logo" class="h-12 w-56 object-contain">
+    <img src="{{ asset('assets/img/front/logo1.jpg') }}" alt="missing logo" class="h-12 w-56 object-contain">
+    <img src="{{ asset('assets/img/front/logo.png') }}" alt="missing logo" class="h-12 w-56 object-contain">
 </div>
 
 <!-- Navbar -->
@@ -66,11 +66,13 @@
         <!-- Desktop Menu -->
         <div class="hidden lg:flex flex-1 justify-center">
             <ul class="flex space-x-6 text-black text-lg">
-                <li><a href="{{ route('feedback') }}" class="hover:text-red-300 transition">Feedback</a></li>
-                <li><a href="{{ route('complain') }}" class="hover:text-red-300 transition">Complain</a></li>
-
-                <li><a href="{{ route('inqury') }}" class="hover:text-red-300 transition">Inquiry</a></li>
                 <li><a href="{{ route('varranty') }}" class="hover:text-red-300 transition">Warranty</a></li>
+                <li><a href="{{ route('inqury') }}" class="hover:text-red-300 transition">Distributor/dealer inquiry</a></li>
+                <li><a href="{{ route('feedback') }}" class="hover:text-red-300 transition">Feedback</a></li>
+                <li><a href="{{ route('complain') }}" class="hover:text-red-300 transition">Complains</a></li>
+
+             
+               
             </ul>
         </div>
     </div>
@@ -79,11 +81,13 @@
     <div id="mobile-menu"
         class="hidden absolute left-0 top-full w-full bg-black bg-opacity-90 p-4 rounded-lg text-white text-lg shadow-lg z-50 transition-transform transform scale-95 opacity-0">
         <ul class="space-y-2">
-            <li><a href="{{ route('feedback') }}" class="block py-2 hover:text-yellow-300 transition">Feedback</a></li>
-            <li><a href="{{ route('complain') }}" class="block py-2 hover:text-yellow-300 transition">Complain</a></li>
-
-            <li><a href="{{ route('inqury') }}" class="block py-2 hover:text-yellow-300 transition">Inquiry</a></li>
             <li><a href="{{ route('varranty') }}" class="block py-2 hover:text-yellow-300 transition">Warranty</a></li>
+            <li><a href="{{ route('inqury') }}" class="block py-2 hover:text-yellow-300 transition">Distributor/dealer inquiry</a></li>
+            <li><a href="{{ route('feedback') }}" class="block py-2 hover:text-yellow-300 transition">Feedback</a></li>
+            <li><a href="{{ route('complain') }}" class="block py-2 hover:text-yellow-300 transition">Complains</a></li>
+
+            
+           
         </ul>
     </div>
 </nav>

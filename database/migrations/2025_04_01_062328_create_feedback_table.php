@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->enum('rating',['excellent','good'])->nullable()->default('excellent');
-            $table->string('comments');
+            $table->enum('rating',['excellent','good','very good','fair'])->nullable()->default('excellent');
+            $table->text('comments');
             $table->timestamps();
         });
     }

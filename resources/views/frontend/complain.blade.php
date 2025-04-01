@@ -23,7 +23,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
-                    Home
+                    Home 
                 </a>
             </li>
             <li>
@@ -67,30 +67,19 @@
                    border border-gray-700 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.3)] 
                    hover:shadow-[0_8px_40px_rgba(60,60,60,0.2)] overflow-hidden">
             <!-- Form Header with Visual Appeal -->
-            <header class="text-center mb-10">
+            <header class="text-center mb-10" autofocus>
                 <div class="inline-block p-3 rounded-full bg-gray-100 mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
                     </svg>
                 </div>
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Share Your Concern</h1>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Share Your Complain</h1>
                 <p class="text-gray-600 max-w-xl mx-auto">We value your feedback and are committed to resolving any issues you may be experiencing. Please fill in the details below so we can assist you promptly.</p>
             </header>
 
             <!-- Complaint Form with Improved Styling -->
-            <form action="#" method="POST" enctype="multipart/form-data" class="space-y-6">
+            <form action="{{route('complain.store')}}" method="POST" enctype="multipart/form-data" class="space-y-6">
                 @csrf
-                
-
-                <!-- Name Field -->
-                <div class="form-group">
-                    <label for="name" class="block text-gray-300 font-medium mb-2 required">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name"  autofocus
-                        class="w-full px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
-                        >
-                    @error('name')
-                        <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
-                    @enderror
                 <!-- Two-column layout for personal information -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Name Field -->
@@ -104,7 +93,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
                             </div>
-                            <input type="text" id="name" name="name" placeholder="Enter your full name" 
+                            <input type="text" id="name" name="name" placeholder="Enter your full name"
                                 class="w-full pl-10 px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
                             >
                         </div>
@@ -124,7 +113,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                 </svg>
                             </div>
-                            <input type="tel" id="phone" name="mobile" placeholder="+91 9876543210" required
+                            <input type="tel" id="phone" name="mobile" placeholder="+91 9876543210" 
                                 class="w-full pl-10 px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
                                >
                         </div>
@@ -136,11 +125,6 @@
                 
                 <!-- Email Field -->
                 <div class="form-group">
-                    <label for="email" class="block text-gray-300 font-medium mb-2 required">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" autofocus
-                        class="w-full px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors"
-                        >
-
                     <label for="email" class="block text-gray-700 font-medium mb-2">
                         Email Address <span class="text-red-500">*</span>
                     </label>
@@ -150,7 +134,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                         </div>
-                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" 
                             class="w-full pl-10 px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
                             >
                     </div>
@@ -172,7 +156,7 @@
                         </div>
                         <input type="text" id="warranty" name="warentycard_n" placeholder="Enter warranty card number"
                             class="w-full pl-10 px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
-                            value="{{ old('warentycard_n') }}">
+                            >
                     </div>
                     @error('warentycard_n')
                         <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
@@ -185,10 +169,10 @@
                         Complaint Details <span class="text-red-500">*</span>
                     </label>
                     <div class="relative">
-                        <textarea id="complain" name="complain_m" rows="6" placeholder="Please describe your issue in detail. Include any relevant information such as product details, date of purchase, and specific problems you're experiencing..." required
+                        <textarea id="complain" name="complain_m" rows="6" placeholder="Please describe your issue in detail. Include any relevant information such as product details, date of purchase, and specific problems you're experiencing..." 
                             class="w-full px-4 py-3 rounded-lg bg-gray-50 text-gray-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors">{{ old('complain_m') }}</textarea>
                     </div>
-                    <p class="mt-1 text-sm text-gray-500">Be as specific as possible to help us resolve your issue quickly.</p>
+                    {{-- <p class="mt-1 text-sm text-gray-500">Be as specific as possible to help us resolve your issue quickly.</p> --}}
                     @error('complain_m')
                         <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                     @enderror
@@ -197,10 +181,11 @@
                 <!-- File Attachments with Drop Zone -->
                 <div class="form-group">
                     <label class="block text-gray-700 font-medium mb-2">
-                        Attachments <span class="text-gray-500 text-sm font-normal">(Optional)</span>
+                        Attachments 
+                        {{-- <span class="text-gray-500 text-sm font-normal"></span> --}}
                     </label>
                     <div class="relative">
-                        <input type="file" name="image" id="file-upload"  autofocus
+                        <input type="file" name="image" id="file-upload"  
                             class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
                         <div class="flex items-center justify-between px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 border border-gray-600 border-dashed">
                             <span id="file-name" class="text-gray-300 truncate">No file chosen</span>
@@ -214,7 +199,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                             </svg>
                             <span id="file-name" class="text-gray-500 text-center mb-1">Drag files here or click to browse</span>
-                            <span class="text-xs text-gray-500">JPEG, PNG, PDF (Max 5MB)</span>
+                            {{-- <span class="text-xs text-gray-500">(JPEG, PNG, PDF)</span> --}}
                         </div>
                     </div>
                     @error('image')
