@@ -2,12 +2,12 @@
 @section('content')
 
 <!-- Hero Banner Section with Improved Parallax Effect -->
-<div class="relative w-full h-[65vh]
+<div class="relative w-full h-[24vh] md:h-[65vh]
             bg-[url('/assets/img/front/complain.jpg')] bg-no-repeat bg-cover bg-fixed bg-center 
             flex items-center justify-center overflow-hidden transition-all duration-700">
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 flex items-center justify-center">
         <div class="text-center transform transition-all duration-500 ease-in-out hover:scale-105">
-            <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wider mb-4">We're Here to Help</h1>
+            <h1 class="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wider mb-4">We're Here to Help</h1>
             <p class="text-gray-300 text-xl md:text-2xl max-w-2xl mx-auto mb-6">Your satisfaction is our priority</p>
             <div class="h-1 w-32 md:w-48 bg-gradient-to-r from-gray-500 via-white to-gray-500 mx-auto rounded-full"></div>
         </div>
