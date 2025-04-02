@@ -21,8 +21,7 @@
         {{-- <a href="#">ThemeKita</a> --}}
       </div>
       <div>
-        Distributed by
-        < a target="_blank" href="#">RVG</a>.
+        Distributed by RVG.
       </div>
     </div>
   </footer>

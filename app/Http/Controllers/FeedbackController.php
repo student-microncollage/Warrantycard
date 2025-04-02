@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\FeedbackRequest;
+use App\Mail\AdminFeedbackMail;
+use App\Mail\UserFeedbackMail;
 use App\Models\Feedback;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Mail;
 
 class FeedbackController extends Controller
 {
@@ -17,7 +19,13 @@ class FeedbackController extends Controller
   //-------------- INSERT FEEDBACK QUERY -----------------//
 public function store(FeedbackRequest $request){
 
-    Feedback::create($request->all());
+   $feedbackData =  Feedback::create($request->all());
+   
+  if($feedbackData){
+      Mail::to('vishalsharmagajrahi@gmail.com')->send(new AdminFeedbackMail($feedbackData));
+      Mail::to($request->email)->send(new UserFeedbackMail($feedbackData));
+  }
+
 
     return redirect()->back()->with('success','your feedback is completed...!');
 }

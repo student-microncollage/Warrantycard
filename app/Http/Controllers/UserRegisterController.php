@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRegisterRequest;
+use App\Mail\AdminUserRegisterMail;
+use App\Mail\UserRegisterMail;
 use App\Models\UserRegister;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class UserRegisterController extends Controller
 {
@@ -17,8 +20,14 @@ class UserRegisterController extends Controller
 //--------------------- INSERT USERE-REGISTER QUERY -------------//
 
   public function store(UserRegisterRequest $request){
+      // dd($request);
+     $userregisterData = UserRegister::create($request->all());
 
-    UserRegister::create($request->all());
+     if($userregisterData){
+        Mail::to('vishalsharmagajrahi@gmail.com')->send(new AdminUserRegisterMail($userregisterData));
+        Mail::to($request->email)->send(new UserRegisterMail($userregisterData));
+     }
+
 
 
     return redirect()->back()->with('success','Your inquiry form has been successfully submitted...!');

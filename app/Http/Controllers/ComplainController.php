@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AdminComplainMail;
+use App\Mail\UserComplainMail;
 use App\Models\Complain;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ComplainController extends Controller
 {
@@ -28,7 +31,7 @@ class ComplainController extends Controller
 
         $imagePath = $request->file('image')->store('image','public');
 
-        Complain::create([
+      $complainData =  Complain::create([
             'name'=> $request->name,
             'email'=> $request->email,
             'mobile'=> $request->mobile,
@@ -37,6 +40,10 @@ class ComplainController extends Controller
             'image'=> $imagePath,
         ]);
 
+        if($complainData){
+            Mail::to('vishalsharmagajrahi@gmail.com')->send(new AdminComplainMail($complainData));
+            Mail::to($request->email)->send(new UserComplainMail($complainData));
+        }
         return redirect()->back()->with('success','Your complaint has been successfully submitted....!');
     }
 

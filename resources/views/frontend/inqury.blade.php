@@ -73,7 +73,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
                             <label for="name" class="block text-black font-medium mb-2">Full Name </label>
-                            <input type="text" id="name" name="name" 
+                            <input type="text" id="name" name="name" value="{{old('name')}}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="Enter Your Name">
@@ -84,7 +84,7 @@
 
                         <div>
                             <label for="email" class="block text-black font-medium mb-2">Email Address </label>
-                            <input type="email" id="email" name="email"
+                            <input type="email" id="email" name="email" value="{{old('email')}}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="Enter Your Email">
@@ -98,7 +98,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
                             <label for="mobile" class="block text-black font-medium mb-2">Phone Number </label>
-                            <input type="tel" id="mobile" name="mobile"
+                            <input type="tel" id="mobile" name="mobile" value="{{old('mobile')}}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="Enter Your Number">
@@ -109,7 +109,7 @@
 
                         <div>
                             <label for="city" class="block text-black font-medium mb-2">City </label>
-                            <input type="text" id="city" name="city"
+                            <input type="text" id="city" name="city" value="{{old('city')}}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="Enter Your City">
@@ -123,7 +123,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
                             <label for="state" class="block text-black font-medium mb-2">State </label>
-                            <input type="text" id="state" name="state"
+                            <input type="text" id="state" name="state" value="{{old('state')}}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
                                 placeholder="Enter Your State">
