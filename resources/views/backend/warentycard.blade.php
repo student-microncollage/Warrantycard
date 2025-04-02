@@ -48,7 +48,7 @@
 
             </table>
             <div class="mx-4 mb-4">
-                {{$warentycard->links('pagination::bootstrap-4')}}
+                {{$warentycard->links('pagination::bootstrap-5')}}
             </div>
         </div>
     </div>

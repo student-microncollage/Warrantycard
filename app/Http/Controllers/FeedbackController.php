@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class FeedbackController extends Controller
 {
   public function index(){
-    $feedback = Feedback::all();
+    $feedback = Feedback::orderBy('id','desc')->paginate(5);
     // dd($feedback);
     return view('backend.feedback',compact('feedback'));
   }

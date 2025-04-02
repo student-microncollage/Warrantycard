@@ -36,9 +36,9 @@
                     @endif
                 </tbody>
             </table>
-            {{-- <div class="mx-4 mt-3">
-                {{$userregister->links('pagination::bootstrap-5')}}
-            </div> --}}
+            <div class="mx-4 mt-3">
+                {{$feedback->links('pagination::bootstrap-5')}}
+            </div>
         </div>
     </div>
 </div>

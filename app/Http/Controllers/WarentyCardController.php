@@ -14,14 +14,11 @@ use Symfony\Component\Mime\Header\MailboxListHeader;
 class WarentyCardController extends Controller
 {
     public function index(){
-        $warentycard = WarentyCard::orderBy('id', 'desc')->paginate(9);
+        $warentycard = WarentyCard::orderBy('id', 'desc')->paginate(10);
         // dd($warentycard);
         return view('backend.warentycard',compact('warentycard'));
     }
     //-------------- INSERT WERENTY-CARD QUERY -------------//
-    public function warentycard(){
-        return view('backend.add_warentycard');
-    }
 
     public function store(Request $request){
          $request->validate([

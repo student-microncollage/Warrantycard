@@ -14,9 +14,6 @@ class ComplainController extends Controller
     }
 
     //---------------- COMPLAIN INSERT QUERY ------------//
-    public function complain(){
-        return view('backend.add_complain');
-    }
 
     public function store(Request $request){
 

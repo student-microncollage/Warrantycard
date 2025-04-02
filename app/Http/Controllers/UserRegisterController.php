@@ -10,14 +10,11 @@ class UserRegisterController extends Controller
 {
 
   public function index(){
-    $userregister = UserRegister::orderBy('id','desc')->paginate(6); 
+    $userregister = UserRegister::orderBy('id','desc')->paginate(10); 
     // dd($userregister);
     return view('backend.userregister',compact('userregister'));
   }
 //--------------------- INSERT USERE-REGISTER QUERY -------------//
-  public function userregister(){
-    return view('backend.add_userregister');
-  }
 
   public function store(UserRegisterRequest $request){
 
