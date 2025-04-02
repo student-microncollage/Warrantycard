@@ -1,9 +1,10 @@
 <!-- Topbar -->
-<div class="flex justify-between gap-8 bg-[#fefcfc] py-3">
-    <img src="{{ asset('assets/img/front/logo.jpg') }}" alt="missing logo" class="h-12 w-56 object-contain">
-    <img src="{{ asset('assets/img/front/logo1.jpg') }}" alt="missing logo" class="h-12 w-56 object-contain">
-    <img src="{{ asset('assets/img/front/logo.png') }}" alt="missing logo" class="h-12 w-56 object-contain">
+<div class="flex flex-wrap justify-center md:justify-between items-center gap-4 md:gap-8 bg-[#fefcfc] py-3 px-4">
+    <img src="{{ asset('assets/img/front/logo.jpg') }}" alt="missing logo" class="h-12 max-w-xs sm:max-w-sm md:max-w-md object-contain">
+    <img src="{{ asset('assets/img/front/logo1.jpg') }}" alt="missing logo" class="h-12 max-w-xs sm:max-w-sm md:max-w-md object-contain">
+    <img src="{{ asset('assets/img/front/logo.png') }}" alt="missing logo" class="h-12 max-w-xs sm:max-w-sm md:max-w-md object-contain">
 </div>
+
 
 <!-- Navbar -->
 {{-- <nav class="bg-black bg-opacity-80 backdrop-blur-md shadow-lg border-b border-white border-opacity-30">

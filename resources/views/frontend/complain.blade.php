@@ -181,25 +181,16 @@
                 <!-- File Attachments with Drop Zone -->
                 <div class="form-group">
                     <label class="block text-gray-700 font-medium mb-2">
-                        Attachments 
-                        {{-- <span class="text-gray-500 text-sm font-normal"></span> --}}
+                        Attachments
                     </label>
                     <div class="relative">
-                        <input type="file" name="image" id="file-upload"  
-                            class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
-                        <div class="flex items-center justify-between px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 border border-gray-600 border-dashed">
-                            <span id="file-name" class="text-gray-300 truncate">No file chosen</span>
-                            <button type="button" class="text-orange-400 hover:text-orange-300 font-medium text-sm">
-                                Choose File
-                            </button>
-                        <input type="file" name="image" id="file-upload" 
-                            class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+                        <input type="file" name="image" id="file-upload" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
+                        
                         <div class="flex flex-col items-center justify-center px-4 py-6 rounded-lg bg-gray-50 border-2 border-gray-300 border-dashed hover:bg-gray-100 transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                             </svg>
-                            <span id="file-name" class="text-gray-500 text-center mb-1">Drag files here or click to browse</span>
-                            {{-- <span class="text-xs text-gray-500">(JPEG, PNG, PDF)</span> --}}
+                            <span id="file-name" class="text-gray-500 text-center mb-1 text-sm sm:text-base">Drag files here or click to browse</span>
                         </div>
                     </div>
                     @error('image')
