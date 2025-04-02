@@ -2,7 +2,7 @@
 @section('content')
 <!-- Hero Banner Section with Parallax Effect -->
 <div class="relative w-full h-[24vh] md:h-[56vh]
-            bg-[url('/assets/img/front/feedback.JPG')] bg-no-repeat bg-cover bg-fixed bg-center 
+            bg-[url('/assets/img/front/feedback.jpg')] bg-no-repeat bg-cover bg-fixed bg-center 
             flex items-center justify-center overflow-hidden transition-all duration-700">
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/50 flex items-center justify-center">
         <div class="text-center transform transition-all duration-500 ease-in-out">
