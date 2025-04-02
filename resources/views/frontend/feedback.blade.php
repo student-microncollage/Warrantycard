@@ -115,8 +115,7 @@
                             <input type="email" id="email" name="email"  
                                   class="w-full py-3 pl-10 pr-4 rounded-lg bg-gray-100/70 text-black border border-gray-700 
                                         focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent
-                                        transition-all duration-300 placeholder-gray-50
-                                        0"
+                                        transition-all duration-300 placeholder-gray-500"
                                   placeholder="your.email@example.com">
                                   @error('email')
                                   <p><span class=" mt-1 text-sm text-red-500">{{$message}}</span></p>  

@@ -78,7 +78,7 @@
                             <input type="text" id="name" name="name" value="{{ old('name') }}" 
                                 class="w-full px-4 py-3 rounded-lg bg-gray-100 text-black border border-black
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
-                                placeholder="name...">
+                                placeholder="Enter Your Name">
                             @error('name')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -91,7 +91,7 @@
                             <input type="email" id="email" name="email" value="{{ old('email') }}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-100 text-black border border-black
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
-                                placeholder="email...">
+                                placeholder="Enter Your Email">
                             @error('email')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -106,7 +106,7 @@
                             <input type="tel" id="phone" name="phone" value="{{ old('phone') }}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-100 text-black border border-black
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
-                                placeholder="+91....">
+                                placeholder="Enter Your Number">
                             @error('phone')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -118,7 +118,7 @@
                             <input type="text" id="city" name="city" value="{{ old('city') }}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-100 text-black border border-black
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
-                                placeholder="city...">
+                                placeholder="Enter Your City">
                             @error('city')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -133,7 +133,7 @@
                             <input type="text" id="state" name="state" value="{{ old('state') }}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-100 text-black border border-black
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
-                                placeholder="state...">
+                                placeholder="Enter Your State">
                             @error('state')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -145,7 +145,7 @@
                             <input type="text" id="productsln" name="productsln" value="{{ old('productsln') }}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-100 text-black border border-black
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
-                                placeholder="product_no....">
+                                placeholder="Enter Your Product No.">
                             @error('productsln')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -171,7 +171,7 @@
                             <input type="text" id="purchaseform" name="purchaseform" value="{{ old('purchaseform') }}"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-100 text-black border border-black
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-black placeholder-opacity-50 transition-all"
-                                placeholder="purchaseform....">
+                                placeholder="Purchase Form">
                             @error('purchaseform')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror

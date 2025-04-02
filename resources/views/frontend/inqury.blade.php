@@ -76,7 +76,7 @@
                             <input type="text" id="name" name="name" 
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
-                                placeholder="name....">
+                                placeholder="Enter Your Name">
                             @error('name')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -87,7 +87,7 @@
                             <input type="email" id="email" name="email"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
-                                placeholder="email....">
+                                placeholder="Enter Your Email">
                             @error('email')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -101,7 +101,7 @@
                             <input type="tel" id="mobile" name="mobile"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
-                                placeholder="+91....">
+                                placeholder="Enter Your Number">
                             @error('mobile')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -112,7 +112,7 @@
                             <input type="text" id="city" name="city"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
-                                placeholder="city.....">
+                                placeholder="Enter Your City">
                             @error('city')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -126,7 +126,7 @@
                             <input type="text" id="state" name="state"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
-                                placeholder="state...">
+                                placeholder="Enter Your State">
                             @error('state')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
@@ -137,7 +137,7 @@
                             <textarea id="address" name="address" rows="2"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-400 bg-opacity-20 text-black border border-black border-opacity-30 
                                       focus:outline-none focus:ring-2 focus:ring-gray-300 placeholder-gray-500 transition-all duration-200"
-                                placeholder="address..."></textarea>
+                                placeholder="Enter Your Address"></textarea>
                             @error('address')
                                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                             @enderror
