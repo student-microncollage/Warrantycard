@@ -38,7 +38,7 @@
 
 <section class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-white to-gray-100 py-16 border border-black">
     <!-- Main Container with Enhanced Visual Appeal -->
-    <div class="transform hover:scale-[1.01] transition-all duration-300 w-full md:p-8 md:p-10 
+    <div class=" w-full md:p-8 md:p-10 
                  overflow-hidden max-w-4xl">
         
         <!-- Success Message Handling -->
