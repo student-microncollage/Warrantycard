@@ -1,8 +1,29 @@
 <!-- Topbar -->
-<div class="flex flex-wrap justify-center md:justify-between items-center gap-4 md:gap-8 bg-[#fefcfc] py-3 px-4">
-    <img src="{{ asset('assets/img/front/logo.jpg') }}" alt="missing logo" class="h-12 max-w-xs sm:max-w-sm md:max-w-md object-contain">
-    <img src="{{ asset('assets/img/front/logo1.jpg') }}" alt="missing logo" class="h-12 max-w-xs sm:max-w-sm md:max-w-md object-contain">
-    <img src="{{ asset('assets/img/front/logo.png') }}" alt="missing logo" class="h-12 max-w-xs sm:max-w-sm md:max-w-md object-contain">
+<div class=" bg-gradient-to-b from-gray-900 to-gray-200 py-3 px-4">
+    <!-- Desktop View -->
+    <div class="hidden md:flex justify-center md:justify-between items-center space-x-8">
+        <img src="{{ asset('assets/img/front/SpineKraft.png') }}" alt="Weakerock Logo" class="h-12 object-contain max-w-sm">
+        <img src="{{ asset('assets/img/front/Royal Signature logo..png') }}" alt="Royal Signature Logo" class="h-12 object-contain max-w-lg">
+        <img src="{{ asset('assets/img/front/weakerock.png') }}" alt="SpineKraft Logo" class="h-12 object-contain max-w-sm">
+    </div>
+
+    <!-- Mobile View -->
+    <div class="flex md:hidden flex-col items-center pb-2 ">
+        <img src="{{ asset('assets/img/front/SpineKraft.png') }}" 
+             alt="Weakerock Logo" 
+             class="h-14 object-contain max-w-xs rounded-lg hover:scale-105 transition-transform duration-300">
+    
+        <div class="flex justify-center items-center gap-6 flex-wrap">
+            <img src="{{ asset('assets/img/front/Royal Signature logo..png') }}" 
+                 alt="Royal Signature Logo" 
+                 class="h-14 object-contain max-w-xs rounded-lg  hover:scale-105 transition-transform duration-300">
+            
+            <img src="{{ asset('assets/img/front/weakerock.png') }}" 
+                 alt="SpineKraft Logo" 
+                 class="h-14 object-contain max-w-xs rounded-lg  hover:scale-105 transition-transform duration-300">
+        </div>
+    </div>
+    
 </div>
 
 
