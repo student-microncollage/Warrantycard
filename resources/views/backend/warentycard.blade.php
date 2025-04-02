@@ -6,7 +6,7 @@
     <div class="row mx-4">
         <div class="justify-content-center mt-4">
                 <h1 class="text-dark text-center">Warenty Card Details</h1>
-            <table class="table table-bordered table-striped table-hover mt-4 mx-4  shadow">         
+            <table class="table table-bordered table-striped table-responsive table-hover mt-4 mx-4  shadow">         
                 <thead class="table-info">
                     <tr>
                         <th>SR.no</th>

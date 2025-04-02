@@ -6,7 +6,7 @@
     <div class="row mx-4">
         <h1 class="text-dark text-center mt-4 ">User Feedback Details</h1>
         <div class="justify-content-center">
-            <table class="table table-bordred table-hover table-striped border-4 mx-4 shadow">
+            <table class="table table-bordred table-hover table-striped table-responsive border-4 mx-4 shadow">
                 <thead class="table-info">
                     <tr>
                         <th>Sn.no</th>

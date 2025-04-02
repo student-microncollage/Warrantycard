@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('state');
             $table->text('address');
-            $table->string('dealer_&_distributor');
+            $table->string('dealer_and_distributor');
             $table->timestamps();
         });
     }
