@@ -61,7 +61,7 @@
 
     <div class="container mx-auto max-w-4xl">
         <!-- Form Card with Glass Morphism Effect -->
-        <div class="transform hover:scale-[1.01] transition-all duration-300 w-full p-8 md:p-10 
+        <div class=" w-full p-8 md:p-10 
                    bg-gradient-to-br from-gray-200/80 to-black/10 backdrop-blur-xl 
                    border border-gray-700 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.3)] 
                    hover:shadow-[0_8px_40px_rgba(60,60,60,0.2)] overflow-hidden">

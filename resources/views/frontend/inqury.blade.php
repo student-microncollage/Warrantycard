@@ -41,7 +41,7 @@
 
     <div class="min-h-screen flex items-center justify-center p-4 sm:p-6 bg-white my-12">
 
-        <div class="max-w-6xl my-12 transform hover:scale-[1.01] transition-all duration-300 w-full p-8 md:p-10 
+        <div class="max-w-6xl my-12  w-full p-8 md:p-10 
                    bg-gray-200 backdrop-blur-xl 
                    border border-gray-700 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.3)] 
                    hover:shadow-[0_8px_40px_rgba(60,60,60,0.2)] overflow-hidden">
