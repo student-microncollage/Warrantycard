@@ -43,8 +43,8 @@ Route::get('/feedback/delete/{id}',[FeedbackController::class,'delete'])->name('
 
 // Route::get('/', [HomeController::class, 'index'])->name('frontend.index');
 
-Route::get('/', [HomeController::class, 'feedback'])->name('feedback');
+Route::get('/feedback', [HomeController::class, 'feedback'])->name('feedback');
 Route::get('/complain', [HomeController::class, 'complain'])->name('complain');
 Route::get('/user_rec', [HomeController::class, 'user_rec'])->name('user_rec');
 Route::get('/inqury', [HomeController::class, 'inqury'])->name('inqury');
-Route::get('/varranty', [HomeController::class, 'varranty'])->name('varranty');
+Route::get('/', [HomeController::class, 'varranty'])->name('varranty');

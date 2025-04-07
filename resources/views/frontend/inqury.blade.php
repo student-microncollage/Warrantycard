@@ -1,4 +1,4 @@
-@extends('components.main')
+@extends('components.main', ['title' => 'inquiry'])
 @section('content')
     <!-- Hero Banner Section with Parallax Effect -->
     <div
