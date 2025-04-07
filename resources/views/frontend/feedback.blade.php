@@ -1,4 +1,4 @@
-@extends('components.main')
+@extends('components.main',['title' =>'feedback'])
 @section('content')
 <!-- Hero Banner Section with Parallax Effect -->
 <div class="relative w-full h-[24vh] md:h-[56vh]

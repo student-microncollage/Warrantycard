@@ -1,4 +1,4 @@
-@extends('components.main')
+@extends('components.main', ['title' => 'warrenty'])
 @section('content')
 
   <!-- Hero Banner Section with Parallax Effect -->
