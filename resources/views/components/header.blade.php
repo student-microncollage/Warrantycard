@@ -110,7 +110,7 @@
         </script>
         @endif
         
-        <div class="flex justify-end mx-4">
+        {{-- <div class="flex justify-end mx-4">
             <form action="{{route('search')}}" method="GET" class="w-full max-w-sm">
                 <div class="flex border border-gray-300 rounded-lg overflow-hidden">
                     <input type="text" name="search" placeholder="Search..." 
@@ -120,6 +120,10 @@
                     </button>
                 </div>
             </form>
+        </div> --}}
+
+        <div>
+            <button onclick="" type="submit" class="btn btn-primary">search your status</button>
         </div>
 
     </div>
