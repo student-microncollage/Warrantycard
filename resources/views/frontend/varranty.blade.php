@@ -4,9 +4,9 @@
   <!-- Hero Banner Section with Parallax Effect -->
   <div
   class="relative w-full h-[24vh] md:h-[56vh]
-      bg-[url('/assets/img/front/feedback.jpg')] bg-no-repeat bg-cover bg-fixed bg-center 
-      flex items-center justify-center overflow-hidden transition-all duration-700">
-  <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/50 flex items-center justify-center">
+      bg-[url('/assets/img/front/bg-img.jpg')] bg-no-repeat bg-cover bg-center 
+  flex items-center justify-center overflow-hidden transition-all duration-700">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/40 flex items-center justify-center">
       <div class="text-center transform transition-all duration-500 ease-in-out">
           <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wider mb-2">Warranty
           </h1>
