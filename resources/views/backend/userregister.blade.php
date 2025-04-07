@@ -5,6 +5,16 @@
 <div class="container">
     <div class="row mx-4">
         <h1 class="text-dark text-center mt-4 ">User Inquiry Details</h1>
+            <div class="d-flex justify-content-end">
+                <form action="{{route('userregister.index')}}" method="GET" class="mb-4">
+                    <div class="input-group">
+                        <input type="text" name="search" class="form-control" value="{{request('search')}}">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary">search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         <div class="justify-content-center">
             <table class="table table-bordred table-hover table-responsive table-striped border-4 mx-4 shadow">
                 <thead class="table-info">
@@ -19,7 +29,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if ($userregister !== null)
+                    @if ($userregister->count() > 0)
                         @foreach ($userregister as $userregisters )
                         <tr>
                             <td>{{$loop->iteration}}</td>

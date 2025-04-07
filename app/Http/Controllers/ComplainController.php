@@ -11,9 +11,18 @@ use Illuminate\Support\Facades\Mail;
 
 class ComplainController extends Controller
 {
-    public function index(){
-        $complain = Complain::orderBy('id','desc')->paginate(5);
+    public function index(Request $request){
+        $search = $request->input('search');
+
+        $complain = Complain::where('name' ,'like',"%{$search}%")
+        ->orwhere('email','like', "%{$search}%")->
+        orwhere('mobile','like',"%{$search}%")->orderBy('id','desc')->paginate(10);
+
         return view('backend.complain',compact('complain'));
+    
+    
+        // $complain = Complain::orderBy('id','desc')->paginate(10);
+       
     }
 
     //---------------- COMPLAIN INSERT QUERY ------------//

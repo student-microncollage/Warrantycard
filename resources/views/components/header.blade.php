@@ -91,12 +91,37 @@
                 <li><a href="{{ route('varranty') }}" class="hover:text-red-300 transition">Warranty</a></li>
                 <li><a href="{{ route('inqury') }}" class="hover:text-red-300 transition">Distributor/dealer inquiry</a></li>
                 <li><a href="{{ route('feedback') }}" class="hover:text-red-300 transition">Feedback</a></li>
-                <li><a href="{{ route('complain') }}" class="hover:text-red-300 transition">Complains</a></li>
-
-             
-               
+                <li><a href="{{ route('complain') }}" class="hover:text-red-300 transition">Complains</a></li>    
             </ul>
+
         </div>
+
+        @if(session('error'))
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: "{{ session('error') }}",
+                    timer: 5000,
+                    showConfirmButton: false
+                });
+            });
+        </script>
+        @endif
+        
+        <div class="flex justify-end mx-4">
+            <form action="{{route('search')}}" method="GET" class="w-full max-w-sm">
+                <div class="flex border border-gray-300 rounded-lg overflow-hidden">
+                    <input type="text" name="search" placeholder="Search..." 
+                        class="w-full px-4 py-2 outline-none border-none">
+                    <button type="submit" class="bg-blue-500 text-white px-2 py-2 hover:bg-blue-600">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </div>
+
     </div>
 
     <!-- Mobile Menu -->

@@ -39,6 +39,7 @@
 
 
   <!-- Success Message Handling -->
+
              @if (session('success'))
                 <div id="success-message" class="mb-6">
                     <script>

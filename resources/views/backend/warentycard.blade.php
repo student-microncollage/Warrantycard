@@ -6,6 +6,16 @@
     <div class="row mx-4">
         <div class="justify-content-center mt-4">
                 <h1 class="text-dark text-center">Warenty Card Details</h1>
+                <div class="d-flex justify-content-end">
+                    <form action="{{ route('warentycard.index') }}" method="GET" class="mb-4">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" value="{{request('search')}}" placeholder="Search..." >
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             <table class="table table-bordered table-striped table-responsive table-hover mt-4 mx-4  shadow">         
                 <thead class="table-info">
                     <tr>
@@ -41,7 +51,10 @@
                         </td>
                     </tr>
                     @empty
-                    Record Not Found....!
+                    <tr>
+                        <th class="text-danger text-center" colspan="8">Record Not Found....!</th>
+                    </tr>
+                    
                     @endforelse
 
                 </tbody>

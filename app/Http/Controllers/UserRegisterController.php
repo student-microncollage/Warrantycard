@@ -12,9 +12,18 @@ use Illuminate\Support\Facades\Mail;
 class UserRegisterController extends Controller
 {
 
-  public function index(){
-    $userregister = UserRegister::orderBy('id','desc')->paginate(10); 
-    // dd($userregister);
+  public function index(Request $request){
+
+    $search = $request->input('search');
+
+      $userregister = UserRegister::where('name','like',"%{$search}%")
+      ->orwhere('email','like' ,"%{$search}%")
+      ->orwhere('mobile','like',"%{$search}%")->orderBy('id','desc')->paginate(10); 
+
+
+    // $userregister = UserRegister::orderBy('id','desc')->paginate(10); 
+    
+    
     return view('backend.userregister',compact('userregister'));
   }
 //--------------------- INSERT USERE-REGISTER QUERY -------------//

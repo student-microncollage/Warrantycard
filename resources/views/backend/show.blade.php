@@ -26,7 +26,7 @@
                         <div class="mb-2"><strong>Purchase Date:</strong> {{ $show->purchase_date }}</div>
                         <div class="mb-2"><strong>Expaire Date:</strong> {{ $show->expaire_date }}</div>
                     @else
-                        <p class="text-center">No Data Found</p>
+                        <p class="text-center text-danger">No Data Found</p>
                     @endif
                 </div>
                 <div class="card-footer">

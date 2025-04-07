@@ -10,8 +10,16 @@ use Illuminate\Support\Facades\Mail;
 
 class FeedbackController extends Controller
 {
-  public function index(){
-    $feedback = Feedback::orderBy('id','desc')->paginate(5);
+  public function index(Request $request){
+    $search = $request->input('search');
+
+    $feedback = Feedback::where('name','like',"%{$search}%")
+    ->orwhere('email','like',"%{$search}%")->orderBy('id','desc')->paginate(10);
+
+
+
+
+    // $feedback = Feedback::orderBy('id','desc')->paginate(10);
     // dd($feedback);
     return view('backend.feedback',compact('feedback'));
   }

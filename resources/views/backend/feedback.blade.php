@@ -5,6 +5,16 @@
 <div class="container">
     <div class="row mx-4">
         <h1 class="text-dark text-center mt-4 ">User Feedback Details</h1>
+        <div class="d-flex justify-content-end">
+            <form action="{{route('feedback.index')}}" method="GET" class="mb-4">
+                <div class="input-group">
+                    <input type="text" name="search" class="form-control" value="{{request('search')}}">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <div class="justify-content-center">
             <table class="table table-bordred table-hover table-striped table-responsive border-4 mx-4 shadow">
                 <thead class="table-info">
@@ -18,7 +28,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if ($feedback !== null)
+                    @if ($feedback->count() > 0)
                         @foreach ($feedback as $feedbacks )
                         <tr>
                             <td>{{$loop->iteration}}</td>

@@ -13,10 +13,23 @@ use Symfony\Component\Mime\Header\MailboxListHeader;
 
 class WarentyCardController extends Controller
 {
-    public function index(){
-        $warentycard = WarentyCard::orderBy('id', 'desc')->paginate(10);
-        // dd($warentycard);
-        return view('backend.warentycard',compact('warentycard'));
+    public function index(Request $request) {
+        $search = $request->input('search'); 
+        $warrentydata = WarentyCard::query(); 
+        // dd($warrentydata);
+    
+        if (!empty($search)) { 
+            $warrentydata->where('name', 'like', "%{$search}%")
+            ->orwhere('email', 'like', "%{$search}%")
+            ->orwhere('city','like',"%{$search}%")
+            ->orwhere('phone','like',"%{$search}%"); 
+        
+        }
+
+        $warentycard = $warrentydata->orderBy('id', 'desc')->paginate(10); 
+    
+        return view('backend.warentycard', compact('warentycard')); 
+    
     }
     //-------------- INSERT WERENTY-CARD QUERY -------------//
 

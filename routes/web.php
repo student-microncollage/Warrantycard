@@ -6,11 +6,13 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserRegisterController;
 use App\Http\Controllers\WarentyCardController;
 use App\Http\Controllers\FeedbackController;
-
-
+use App\Http\Controllers\SearchController;
 
 //------------------  ADMIN CONTROLLER ----------------- //
 Route::get('/dashbord',[AdminController::class,'dashbord'])->name('admin.dashbord');
+
+//------------------ SEARCH CONTROLLER ------------------ //
+Route::get('/search',[SearchController::class,'search'])->name('search');
 
 //------------------------- WARENTY CARD CONTROLLER ----------------- //
 Route::get('/warentycard/index',[WarentyCardController::class,'index'])->name('warentycard.index');
