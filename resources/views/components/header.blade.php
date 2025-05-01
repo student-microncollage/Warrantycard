@@ -92,6 +92,8 @@
                 <li><a href="{{ route('inqury') }}" class="hover:text-red-300 transition">Distributor/dealer inquiry</a></li>
                 <li><a href="{{ route('feedback') }}" class="hover:text-red-300 transition">Feedback</a></li>
                 <li><a href="{{ route('complain') }}" class="hover:text-red-300 transition">Complains</a></li>    
+                <li><a href="https://www.guptagaddasamrat.com/" class="hover:text-red-300 transition">Products</a></li>    
+            
             </ul>
 
         </div>
@@ -132,6 +134,7 @@
             <li><a href="{{ route('inqury') }}" class="block py-2 hover:text-yellow-300 transition">Distributor/dealer inquiry</a></li>
             <li><a href="{{ route('feedback') }}" class="block py-2 hover:text-yellow-300 transition">Feedback</a></li>
             <li><a href="{{ route('complain') }}" class="block py-2 hover:text-yellow-300 transition">Complains</a></li>
+            <li><a href="https://www.guptagaddasamrat.com/" class="block py-2 hover:text-yellow-300 transition">Products</a></li>
 
             
            
