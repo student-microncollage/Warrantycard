@@ -13,7 +13,7 @@
       href="{{asset('assets/img/kaiadmin/rvg.png')}}"
       type="image/x-icon"
     />
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Fonts and icons -->
     <script src="{{asset('assets/js/plugin/webfont/webfont.min.js')}}"></script>
    

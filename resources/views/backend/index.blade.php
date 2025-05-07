@@ -8,7 +8,19 @@
             <div
               class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
             >
-              <div>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                @if(session('success'))
+                    <script>
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: '{{ session('success') }}',
+                            timer: 3000,
+                            showConfirmButton: false
+                        });
+                    </script>
+                @endif
+               <div>
                 <h3 class="fw-bold mb-3">Dashboard</h3>
                 {{-- <h6 class="op-7 mb-2">Free Bootstrap 5 Admin Dashboard</h6> --}}
               </div>

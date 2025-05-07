@@ -4,7 +4,7 @@
     <div class="hidden md:flex justify-center md:justify-between items-center space-x-8">
         <img src="{{ asset('assets/img/front/SpineKraft.png') }}" alt="Weakerock Logo" class="h-12 object-contain max-w-sm">
         <img src="{{ asset('assets/img/front/Royal Signature logo..png') }}" alt="Royal Signature Logo" class="h-12 object-contain max-w-lg">
-        <img src="{{ asset('assets/img/front/weakerock.png') }}" alt="SpineKraft Logo" class="h-12 object-contain max-w-sm">
+        <img src="{{ asset('assets/img/front/weakerock.png') }}" alt="SpineKraft Logo" class="h-12 object-contain  max-w-sm">
     </div>
 
     <!-- Mobile View -->
@@ -94,7 +94,9 @@
                 <li><a href="{{ route('complain') }}" class="hover:text-red-300 transition">Complains</a></li>    
             </ul>
 
+           
         </div>
+      
 
         @if(session('error'))
         <script>
@@ -121,10 +123,45 @@
                 </div>
             </form>
         </div> --}}
-
-        <div>
-            <button onclick="" type="submit" class="btn btn-primary">search your status</button>
+        <!-- Button to Open Modal -->
+<button onclick="openModal()" type="button" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+    Check Your Warranty Status
+  </button>
+  
+  <!-- Modal Overlay -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <!-- Modal Content -->
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative">
+      
+      <!-- Close Button -->
+      <button onclick="closeModal()"  class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl font-bold">x</button>
+  
+      <!-- The Form -->
+      <form action="{{ route('search') }}" id="searchForm" method="GET">
+        <h2 class="text-xl font-semibold mb-4 text-center">Search Warranty Status</h2>
+        <div class="flex border border-gray-300 rounded-lg overflow-hidden">
+          <input type="text" name="search" placeholder=" search your warenty_card_no..." 
+            class="w-full px-4 py-2 outline-none border-none">
+          <button type="submit" class="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600">
+            Search
+          </button>
         </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- JavaScript -->
+  <script>
+    function openModal() {
+      document.getElementById('modal').classList.remove('hidden');
+    }
+  
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+  </script>
+  
+          
 
     </div>
 
@@ -144,6 +181,13 @@
 </nav>
 
 <!-- JavaScript for Mobile Menu -->
+
+{{-- <script>
+    function openForm(){
+        let serchForm = document.getElementById('serchForm');
+        serchForm.classList.remove('hidden');
+    }
+</script> --}}
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const menuBtn = document.getElementById("menu-btn");

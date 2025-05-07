@@ -34,6 +34,12 @@
             <a class="{{request()->routeIs('admin.dashbord') ? 'bg-info' : 'text-white'}}" href="{{route('admin.dashbord')}}"> <i class="fas fa-home"></i> <p>Dashboard</p></a>
           </li>
           <li class="nav-item active">
+            <a class="{{request()->routeIs('logout') ? 'bg-info' : 'text-white' }}" href="{{route('logout')}}"> <i class="fas fa-home"></i> <p>Logout</p></a>
+          </li>
+          <li class="nav-item active">
+            <a class="{{request()->routeIs('changepassword')? 'bg-info':'text-white'}}"href="{{route('changepassword')}}"><i class="fas fa-table"></i><p>Change-Password</p> </a>
+          </li>
+          <li class="nav-item active">
             <a class="{{request()->routeIs('feedback') ? 'bg-info' : 'text-white' }}" href="{{route('feedback')}}"> <i class="fas fa-home"></i> <p>Home</p></a>
           </li>
           {{-- <li class="fas fa-home mx-2"><a href="{{route('admin.dashbord')}}"><p>Dashbord</p></a></li> --}}

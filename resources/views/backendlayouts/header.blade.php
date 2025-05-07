@@ -4,6 +4,7 @@
             <div class="main-header mb-4 bg-warning">
               <div class="main-header-logo">
                 <!-- Logo Header -->
+                
                 <div class="logo-header" data-background-color="dark">
                   <a href="index.html" class="logo">
                     <img
@@ -52,7 +53,7 @@
                   </nav>
 
                   <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
-
+                    <a href="{{route('logout')}}" class="btn btn-danger rounded btn-sm">Logout</a>
                     <li class="nav-item topbar-user dropdown hidden-caret">
                       <a
                         class="dropdown-toggle profile-pic"
@@ -60,6 +61,7 @@
                         href="#"
                         aria-expanded="false"
                       >
+                     
                         <div class="avatar-sm">
                           <img
                             src="{{asset('assets/img/profile.jpg')}}"

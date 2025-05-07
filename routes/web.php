@@ -1,19 +1,31 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\ComplainController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserRegisterController;
 use App\Http\Controllers\WarentyCardController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\UserController;
+use App\Http\Middleware\CustomMiddleware;
 
 //------------------  ADMIN CONTROLLER ----------------- //
-Route::get('/dashbord',[AdminController::class,'dashbord'])->name('admin.dashbord');
+Route::get('/dashboard', [AdminController::class, 'dashbord'])->name('admin.dashbord')->middleware(CustomMiddleware::class);
+
+//------------------ USER CONTROLLER ------------------ //
+Route::get('login/',[UserController::class , 'login'])->name('login');
+Route::post('/login/store',[UserController::class , 'store'])->name('login.store');
+Route::get('/logout',[UserController::class , 'logout'])->name('logout');
+
+Route::group(['middleware'=>CustomMiddleware::class],function(){
+//--------------    CHANGE PASSWORD CONTROLLER ---------------------//
+Route::get('changepasword/',[ChangePasswordController::class, 'changepassword'])->name('changepassword');
+Route::post('changepasword/store',[ChangePasswordController::class, 'store'])->name('changepassword.store');
 
 //------------------ SEARCH CONTROLLER ------------------ //
 Route::get('/search',[SearchController::class,'search'])->name('search');
-
 //------------------------- WARENTY CARD CONTROLLER ----------------- //
 Route::get('/warentycard/index',[WarentyCardController::class,'index'])->name('warentycard.index');
 Route::post('/warentycard/store',[WarentyCardController::class,'store'])->name('warentycard.store');
@@ -38,7 +50,7 @@ Route::get('/feedback/index',[FeedbackController::class,'index'])->name('feedbac
 Route::post('/feedback/store',[FeedbackController::class,'store'])->name('feedback.store');
 Route::get('/feedback/delete/{id}',[FeedbackController::class,'delete'])->name('feedback.delete');
 
-
+});
 // --------------------FRONTEND -- CONTROLLER----------------//
 
 // Route::get('/', [HomeController::class, 'index'])->name('frontend.index');
